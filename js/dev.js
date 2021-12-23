@@ -59,15 +59,35 @@ const tavrosGroup = new Swiper('.tavros-group__slider', {
     },
 });
 
-var mouseCursor = document.querySelector('.cursor');
-var dataAttr = document.querySelectorAll('[data-cursor]');
+if($('.cursor').length) {
+    var mouseCursor = document.querySelector('.cursor');
+    var dataAttr = document.querySelectorAll('[data-cursor]');
 
-window.addEventListener('mousemove', moveCursor);
+    window.addEventListener('mousemove', moveCursor);
 
-function moveCursor(e) {
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+    function moveCursor(e) {
+        mouseCursor.style.top = e.pageY + 'px';
+        mouseCursor.style.left = e.pageX + 'px';
+    }
+
+    $(document).on('mouseover', '[data-cursor]:not(.cursor-active)', function () {
+        let dataClass = $(this).attr('data-cursor');
+        let dataImg = $(this).attr('data-cursor-img');
+        $(this).addClass('cursor-active');
+        $('.cursor').addClass(dataClass);
+        $('.cursor').addClass('cursor-is-active');
+        $('.cursor').css('background-image', 'url(' + dataImg + ')');
+    })
+    $(document).on('mouseleave', '.cursor-active[data-cursor]', function () {
+        let dataClass = $(this).attr('data-cursor');
+        $(this).removeClass('cursor-active');
+        $('.cursor').removeClass('cursor-is-active');
+        $('.cursor').removeClass(dataClass);
+        // $('.cursor').css({ 'background-image' : ''});
+    })
 }
+
+
 
 
 
@@ -104,9 +124,20 @@ function mainProductsCounter() {
     });
 }
 
+
+function pageTabs() {
+    $('[data-tab]').click(function() {
+        let thisId = $(this).parents('[data-tabs]').attr('data-tabs');
+        $(this).parents('[data-tabs]').find('[data-tab]').removeClass("active").eq($(this).index()).addClass("active");
+        $(`[data-tabs-content="${thisId}"]`).find('[data-tabs-section]').removeClass('active').eq($(this).index()).addClass('active');
+    });
+}
+
+
 $(document).ready(function () {
     setTerritoryPos();
 
+    pageTabs();
     $(document).on('mouseover', '[data-cursor]:not(.cursor-active)', function () {
         let dataClass = $(this).attr('data-cursor');
         let dataImg = $(this).attr('data-cursor-img');
@@ -125,22 +156,91 @@ $(document).ready(function () {
 
     let mainProductsFlag = true;
 
-    $(window).on('scroll', function () {
-        let mainProductsBlock = $('.main-products__slider'),
-            mainProductsBlockOffset = mainProductsBlock.offset().top + mainProductsBlock.innerHeight(),
-            scrollTop = $(window).scrollTop() + $(window).innerHeight();
+    if($('.main-products__slider').length) {
+        let mainProductsFlag = true;
 
-        // console.log('mainProductsBlockOffset: ' + mainProductsBlockOffset);
-        // console.log('scrollTop: ' + scrollTop);
+        $(window).on('scroll', function () {
+            let mainProductsBlock = $('.main-products__slider'),
+                mainProductsBlockOffset = mainProductsBlock.offset().top + mainProductsBlock.innerHeight(),
+                scrollTop = $(window).scrollTop() + $(window).innerHeight();
 
-        if(scrollTop >= mainProductsBlockOffset && mainProductsFlag) {
-            mainProductsFlag = false;
-            setTimeout(function () {
-                $('.main-products__percent').addClass('active');
-                mainProductsCounter();
-            }, 300);
+            // console.log('mainProductsBlockOffset: ' + mainProductsBlockOffset);
+            // console.log('scrollTop: ' + scrollTop);
 
-        }
+            if(scrollTop >= mainProductsBlockOffset && mainProductsFlag) {
+                mainProductsFlag = false;
+                setTimeout(function () {
+                    $('.main-products__percent').addClass('active');
+                    mainProductsCounter();
+                }, 300);
 
-    })
+            }
+        })
+    }
 })
+
+// Arrows
+
+const $trigger = $('.interconnection__unit');
+
+const $svgContainer = $('#svg-container');
+const svgCleanHtml = $svgContainer.html();
+
+const animatePath = (dur, pathId, delay) => {
+    const $defs = $('#defs')
+    const id = (`id${Math.random()}`).replace('.', '')
+    const $gradientVertical = $(`<linearGradient id="${id}" x2="0%" y2="100%">
+            <stop offset="0" stop-color="rgba(204, 199, 132, 1)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="1"  begin="${delay}"/>
+            </stop>
+            <stop offset="0" stop-color="rgba(204, 199, 132, 0)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="100%" begin="${delay}"/>
+            </stop>
+        </linearGradient>`)
+    const $gradientHorizontal = $(`<linearGradient id="${id}">
+            <stop offset="0" stop-color="rgba(204, 199, 132, 1)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="1" begin="${delay}" />
+            </stop>
+            <stop offset="0" stop-color="rgba(204, 199, 132, 0)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="100%" begin="${delay}" />
+            </stop>
+        </linearGradient>`)
+    const $gradientHorizontalLtr = $(`<linearGradient id="${id}" x1="100%" x2="0%">
+            <stop offset="0" stop-color="rgba(204, 199, 132, 1)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="1" begin="${delay}" />
+            </stop>
+            <stop offset="0" stop-color="rgba(204, 199, 132, 0)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="100%" begin="${delay}" />
+            </stop>
+        </linearGradient>`)
+    if($(pathId).hasClass('vertical')) {
+        $defs.append($gradientVertical)
+    } else if($(pathId).hasClass('horizontal')) {
+        $defs.append($gradientHorizontal)
+    } else {
+        $defs.append($gradientHorizontalLtr)
+    }
+    $(pathId).attr('fill', `url(#${id})`)
+}
+
+$trigger.on('click', function () {
+    $('[data-stage]').attr('data-stage', $(this).index());
+    $svgContainer.html($(svgCleanHtml))
+
+
+
+    if($(this).index() == 1) {
+        animatePath('2s', '#path-1', 0)
+        animatePath('.5s', '#path-3', 0)
+        animatePath('1s', '#path-4', '1s')
+        animatePath('1s', '#path-7', '1s')
+        animatePath('1s', '#path-10', '2s')
+        animatePath('1s', '#path-6', '3s')
+        animatePath('2s', '#path-9', '3s')
+        animatePath('1s', '#path-11', '4s')
+        animatePath('1s', '#path-5', '5s')
+    }
+
+    $svgContainer.html($svgContainer.html())
+})
+
