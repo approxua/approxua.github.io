@@ -224,21 +224,54 @@ const animatePath = (dur, pathId, delay) => {
 }
 
 $trigger.on('click', function () {
+    $('.interconnection__icon').removeClass('active');
+    $('.interconnection__wrap').addClass('active');
+    $trigger.removeClass('active');
+    $(this).addClass('active');
     $('[data-stage]').attr('data-stage', $(this).index());
     $svgContainer.html($(svgCleanHtml))
 
 
 
     if($(this).index() == 1) {
-        animatePath('2s', '#path-1', 0)
+        $('.interconnection__unit:nth-child(2) .interconnection__icon:not(:last-child)').addClass('active');
+
         animatePath('.5s', '#path-3', 0)
-        animatePath('1s', '#path-4', '1s')
-        animatePath('1s', '#path-7', '1s')
-        animatePath('1s', '#path-10', '2s')
-        animatePath('1s', '#path-6', '3s')
-        animatePath('2s', '#path-9', '3s')
-        animatePath('1s', '#path-11', '4s')
-        animatePath('1s', '#path-5', '5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(4) .interconnection__icon:first-child').addClass('active');
+        }, 500);
+
+        animatePath('1s', '#path-1', 0)
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(3) .interconnection__icon:not(:nth-child(2))').addClass('active');
+        }, 1000);
+
+        animatePath('1s', '#path-17', '.5s')
+
+        animatePath('.5s', '#path-4', '.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(8) .interconnection__icon').addClass('active');
+        }, 1000);
+
+        animatePath('1s', '#path-13', '1s')
+        animatePath('1s', '#path-14', '1.5s')
+        animatePath('.5s', '#path-7', '1s')
+
+        animatePath('1s', '#path-10', '1s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(7) .interconnection__icon').addClass('active');
+        }, 2000);
+
+        animatePath('.5s', '#path-6', '2s')
+        animatePath('1s', '#path-9', '2s')
+        animatePath('1s', '#path-11', '3s')
+        animatePath('.5s', '#path-5', '3s')
+        animatePath('.5s', '#path-8', '3.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(9) .interconnection__icon').addClass('active');
+        }, 4000);
+        animatePath('.5s', '#path-12', '3.5s')
+        animatePath('.5s', '#path-16', '4s')
     }
 
     $svgContainer.html($svgContainer.html())
