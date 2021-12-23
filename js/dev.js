@@ -197,6 +197,14 @@ const animatePath = (dur, pathId, delay) => {
                 <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="100%" begin="${delay}"/>
             </stop>
         </linearGradient>`)
+    const $gradientVerticalBtt = $(`<linearGradient id="${id}" x1="0%" y1="100%">
+            <stop offset="0" stop-color="rgba(204, 199, 132, 1)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="1"  begin="${delay}"/>
+            </stop>
+            <stop offset="0" stop-color="rgba(204, 199, 132, 0)">
+                <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="100%" begin="${delay}"/>
+            </stop>
+        </linearGradient>`)
     const $gradientHorizontal = $(`<linearGradient id="${id}">
             <stop offset="0" stop-color="rgba(204, 199, 132, 1)">
                 <animate dur="${dur}" attributeName="offset" fill="freeze" from="0" to="1" begin="${delay}" />
@@ -217,13 +225,20 @@ const animatePath = (dur, pathId, delay) => {
         $defs.append($gradientVertical)
     } else if($(pathId).hasClass('horizontal')) {
         $defs.append($gradientHorizontal)
-    } else {
+    } else if($(pathId).hasClass('horizontal-ltr')) {
         $defs.append($gradientHorizontalLtr)
+    } else {
+        $defs.append($gradientVerticalBtt)
     }
     $(pathId).attr('fill', `url(#${id})`)
 }
 
-$trigger.on('click', function () {
+$trigger.on('mouseenter', function (e) {
+    e.stopPropagation();
+    let highestTimeoutId = setTimeout(";");
+    for (let i = 0 ; i < highestTimeoutId ; i++) {
+        clearTimeout(i);
+    }
     $('.interconnection__icon').removeClass('active');
     $('.interconnection__wrap').addClass('active');
     $trigger.removeClass('active');
@@ -272,6 +287,155 @@ $trigger.on('click', function () {
         }, 4000);
         animatePath('.5s', '#path-12', '3.5s')
         animatePath('.5s', '#path-16', '4s')
+    }
+
+    if($(this).index() == 2) {
+        $('.interconnection__unit:nth-child(3) .interconnection__icon').addClass('active');
+        $('.interconnection__unit:nth-child(2) .interconnection__icon:not(:last-child):not(:first-child)').addClass('active');
+
+        animatePath('1s', '#path-1', 0)
+        animatePath('.5s', '#path-7', 0)
+        animatePath('1s', '#path-10', 0)
+
+        animatePath('.5s', '#path-6', '1s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(7) .interconnection__icon').addClass('active');
+        }, 1000);
+
+        animatePath('1s', '#path-11', '.5s')
+        animatePath('.5s', '#path-12', '.5s')
+        animatePath('.5s', '#path-5', '.5s')
+        animatePath('.5s', '#path-8', '1s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(9) .interconnection__icon').addClass('active');
+        }, 1500);
+        animatePath('.5s', '#path-16', '1.5s')
+
+    }
+
+    if($(this).index() == 3) {
+        $('.interconnection__unit:nth-child(4) .interconnection__icon').addClass('active');
+
+        animatePath('.5s', '#path-3', 0)
+        $('.interconnection__unit:nth-child(2) .interconnection__icon:first-child').addClass('active');
+
+        animatePath('1s', '#path-2', 0)
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(3) .interconnection__icon:not(:nth-child(2))').addClass('active');
+        }, 1000);
+
+        animatePath('.5', '#path-4', 0)
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(8) .interconnection__icon').addClass('active');
+        }, 500);
+
+        animatePath('1s', '#path-15', 0)
+
+        animatePath('1s', '#path-13', '.5s')
+        animatePath('.5s', '#path-7', '1s')
+        animatePath('1s', '#path-10', '1s')
+
+        animatePath('.5s', '#path-6', '2s')
+        animatePath('1s', '#path-9', '2s')
+        animatePath('1s', '#path-11', '3s')
+        animatePath('.5s', '#path-5', '3s')
+        animatePath('.5s', '#path-12', '3.5s')
+        animatePath('.5s', '#path-8', '3.5s')
+    }
+
+    if($(this).index() == 4) {
+        $('.interconnection__unit:nth-child(9) .interconnection__icon').addClass('active');
+        animatePath('.5s', '#path-18', 0)
+        $('.interconnection__unit:nth-child(8) .interconnection__icon').addClass('active');
+        animatePath('1s', '#path-13', 0)
+        animatePath('.5s', '#path-4', '1s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(4) .interconnection__icon:first-child').addClass('active');
+        }, 1000);
+        animatePath('.5s', '#path-3', '1.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(2) .interconnection__icon:first-child').addClass('active');
+        }, 1500);
+        animatePath('1s', '#path-1', '2s')
+        animatePath('1s', '#path-9', '1.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(3) .interconnection__icon:nth-child(4)').addClass('active');
+        }, 1500);
+        animatePath('.5s', '#path-5', '1s')
+        animatePath('.5s', '#path-8', '.5s')
+    }
+
+    if($(this).index() == 5) {
+        $('.interconnection__unit:nth-child(3) .interconnection__icon').addClass('active');
+        $('.interconnection__unit:nth-child(7) .interconnection__icon').addClass('active');
+        $('.interconnection__unit:nth-child(4) .interconnection__icon').addClass('active');
+        $('.interconnection__unit:nth-child(8) .interconnection__icon').addClass('active');
+        $('.interconnection__unit:nth-child(9) .interconnection__icon').addClass('active');
+        animatePath('.5s', '#path-7', 0)
+        animatePath('.5s', '#path-6', 0)
+        animatePath('.5s', '#path-12', 0)
+        animatePath('.5s', '#path-16', 0)
+        animatePath('1s', '#path-11', 0)
+        animatePath('1s', '#path-14', 0)
+        animatePath('1s', '#path-15', 0)
+        animatePath('1s', '#path-2', '.5s')
+        animatePath('1s', '#path-1', '.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(2) .interconnection__icon:not(:last-child)').addClass('active');
+        }, 500);
+
+        animatePath('1s', '#path-9', '.5s')
+        animatePath('1s', '#path-10', '.5s')
+        animatePath('.5s', '#path-8', '.5s')
+        animatePath('.5s', '#path-5', '.5s')
+        animatePath('.5s', '#path-4', '1s')
+        animatePath('1s', '#path-13', '1s')
+        animatePath('.5s', '#path-3', '1.5s')
+
+    }
+
+    if($(this).index() == 6) {
+        $('.interconnection__unit:nth-child(7) .interconnection__icon').addClass('active');
+        animatePath('.5s', '#path-6', 0)
+        animatePath('1s', '#path-10', 0)
+        $('.interconnection__unit:nth-child(3) .interconnection__icon:nth-child(3)').addClass('active');
+
+        animatePath('.5s', '#path-7', 0)
+        animatePath('1s', '#path-1', '.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(2) .interconnection__icon:not(:first-child)').addClass('active');
+        }, 500);
+    }
+
+    if($(this).index() == 7) {
+        $('.interconnection__unit:nth-child(8) .interconnection__icon').addClass('active');
+        animatePath('.5s', '#path-4', 0)
+        animatePath('1s', '#path-13', 0)
+        $('.interconnection__unit:nth-child(4) .interconnection__icon:first-child').addClass('active');
+
+        animatePath('.5s', '#path-3', '.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(2) .interconnection__icon:first-child').addClass('active');
+        }, 500);
+    }
+
+    if($(this).index() > 7) {
+        $('.interconnection__unit:nth-child(9) .interconnection__icon').addClass('active');
+        animatePath('.5s', '#path-8', 0)
+        animatePath('.5s', '#path-5', 0)
+        animatePath('.5s', '#path-16', 0)
+        animatePath('.5s', '#path-12', 0)
+        animatePath('1s', '#path-11', 0)
+        animatePath('1s', '#path-9', '.5s')
+        animatePath('.5s', '#path-7', '.5s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(3) .interconnection__icon:first-child').addClass('active');
+            $('.interconnection__unit:nth-child(3) .interconnection__icon:nth-child(4)').addClass('active');
+        }, 500);
+        animatePath('1s', '#path-1', '1s')
+        setTimeout(function () {
+            $('.interconnection__unit:nth-child(2) .interconnection__icon:not(:first-child):not(:last-child)').addClass('active');
+        }, 1000);
     }
 
     $svgContainer.html($svgContainer.html())
