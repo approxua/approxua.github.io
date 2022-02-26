@@ -1,1060 +1,564 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>the PET BUTCHER</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicons/manifest.webapp">
+    <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/dev.css">
-    <link rel="stylesheet" href="css/dev2.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="global-wrapper">
     <header class="header">
-        <div class="header__wrap">
-            <div class="header__logo">
-                <a href="#" class="header__logo-img">
+        <div class="header__row">
+            <a href="/" class="header__logo">
+                <svg>
+                    <use xlink:href="#logo-ico"></use>
+                </svg>
+            </a>
+            <div class="header__nav">
+                <div class="header__links">
+                    <a href="#" class="header__links-item">Shop</a>
+                    <a href="#" class="header__links-item">About</a>
+                    <a href="#" class="header__links-item">Wholesale</a>
+                    <a href="#" class="header__links-item">Contact</a>
+                </div>
+                <a href="#" class="header__search">
                     <svg>
-                        <use xlink:href="#header-logo"></use>
+                        <use xlink:href="#search-ico"></use>
                     </svg>
                 </a>
-            </div>
-            <div class="header__nav">
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Агрохолдинг</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Деятельность</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Продукция</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Закупки</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Инвесторам</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Карьера</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-                <div class="header__nav-unit">
-                    <a href="#" class="header__nav-title footer__top-title">Контакты</a>
-                    <div class="header__nav-links">
-                        <a href="#"></a>
-                        <a href="#"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="header__links">
-                <div class="header__lang-unit">
-                    <div class="header__lang-title footer__top-title">Рус</div>
-                    <div class="header__lang-drop">
-                        <a href="#" class="header__drop-title footer__top-title">Рус</a>
-                        <a href="#" class="header__drop-title footer__top-title">Рус</a>
-                    </div>
-                </div>
-                <div class="header__search-unit">
-                    <a href="#" class="header__search">
-                        <svg>
-                            <use xlink:href="#search-ico"></use>
-                        </svg>
-                    </a>
-                </div>
+                <a href="#" class="header__basket">
+                    <svg>
+                        <use xlink:href="#basket-ico"></use>
+                    </svg>
+                    <span class="header__basket-circle">2</span>
+                </a>
+    
             </div>
         </div>
     </header>
-    <div class="cursor"></div>
-    <div class="main">
-        <div class="content">
-            <section class="top-banner">
-                <div class="top-banner__wrap">
-                    <div class="top-banner__slider swiper-wrapper">
-                        <div class="top-banner__slide swiper-slide">
-                            <div class="top-banner__img-wrap">
-                                <img src="../images/top-slider-img.png" alt="">
-                            </div>
-                            <div class="top-banner__info-wrap">
-                                <div class="mbox">
-                                    <div class="top-banner__info">
-                                        <div class="top-banner__title">9 основных предприятий</div>
-                                        <div class="top-banner__descr">От растениеводства и животноводства <br> до производства конечных потребительских товаров</div>
-                                        <a href="#" class="top-banner__btn green-btn">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
+    <main class="main">
+        <section class="main-banner"
+                 style="background-image: url('images/TPB-Landing-Dog.png'), url('images/TPB-Landing-Background.jpg');">
+            <div class="mbox">
+                <div class="main-banner__text">
+                    <div class="main-banner__subtitle">KING OF PET FOOD</div>
+                    <h2 class="main-banner__title">BEST LOCAL PET FOOD IN AUSTRALIA</h2>
+                    <div class="main-banner__desc">Tasty, premium, healthy pet food delivered to your door or shop in store.</div>
+                    <a href="#" class="btn"><span>SHOP NOW</span></a>
+                </div>
+                <div class="main-banner__cards">
+                    <div class="main-banner__cards-item">
+                        <div class="main-banner__cards-img">
+                            <svg width="91" height="91">
+                                <use xlink:href="#fresh-ico"></use>
+                            </svg>
                         </div>
-                        <div class="top-banner__slide swiper-slide">
-                            <div class="top-banner__img-wrap">
-                                <img src="../images/top-slider-img.png" alt="">
-                            </div>
-                            <div class="top-banner__info-wrap">
-                                <div class="mbox">
-                                    <div class="top-banner__info">
-                                        <div class="top-banner__title">9 основных предприятий</div>
-                                        <div class="top-banner__descr">От растениеводства и животноводства <br> до производства конечных потребительских товаров</div>
-                                        <a href="#" class="top-banner__btn green-btn">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="top-banner__slide swiper-slide">
-                            <div class="top-banner__img-wrap">
-                                <img src="../images/top-slider-img.png" alt="">
-                            </div>
-                            <div class="top-banner__info-wrap">
-                                <div class="mbox">
-                                    <div class="top-banner__info">
-                                        <div class="top-banner__title">9 основных предприятий</div>
-                                        <div class="top-banner__descr">От растениеводства и животноводства <br> до производства конечных потребительских товаров</div>
-                                        <a href="#" class="top-banner__btn green-btn">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h5 class="main-banner__cards-title">FRESH</h5>
+                        <p class="main-banner__cards-text text">All food at The Pet Butcher is prepared in small batches on a regular basis to ensure freshness and quality.  </p>
                     </div>
-                    <div class="top-banner__arrows">
-                        <div class="mbox">
-                            <div class="arrows arrows--white-bg">
-                                <div class="arrows__prev"><svg><use xlink:href="#arrow-prev"></use></svg></div>
-                                <div class="slide-count">01</div>
-                                <div class="arrows__next"><svg><use xlink:href="#arrow-next"></use></svg></div>
-                            </div>
+                    <div class="main-banner__cards-item">
+                        <div class="main-banner__cards-img">
+                            <svg width="57" height="55">
+                                <use xlink:href="#no-preserv-ico"></use>
+                            </svg>
                         </div>
+                        <h5 class="main-banner__cards-title">NO PRESERVATIVES</h5>
+                        <p class="main-banner__cards-text text">We don’t believe in adding preservatives or other nasties to help it keep longer. We would rather prepare more regularly so your pet can eat fresh and tasty food every day. </p>
                     </div>
-                    <div class="top-banner__video-wrap">
-                        <a href="#" class="top-banner__video">
-                            <span class="top-banner__video-text">Видео-презентация <br> о компании</span>
-                            <span class="top-banner__video-time">
-                    <svg>
-                        <use xlink:href="#video-ico"></use>
-                    </svg>
-                    2:18
-                </span>
-                        </a>
+                    <div class="main-banner__cards-item">
+                        <div class="main-banner__cards-img">
+                            <svg width="64" height="42">
+                                <use xlink:href="#ingrid-ico"></use>
+                            </svg>
+                        </div>
+                        <h5 class="main-banner__cards-title">LOCAL INGREDIENTS</h5>
+                        <p class="main-banner__cards-text text">We use 100% local Australian ingredients and source our vegetables and fruits according to what’s in season like nature intended.</p>
+                    </div>
+                    <div class="main-banner__cards-item">
+                        <div class="main-banner__cards-img">
+                            <svg width="52" height="51">
+                                <use xlink:href="#waste-ico"></use>
+                            </svg>
+                        </div>
+                        <h5 class="main-banner__cards-title">MINIMAL WASTE</h5>
+                        <p class="main-banner__cards-text text">We want to do good by your pet whilst being kind to the environment around us. All out packaging is recyclable and not as harmful to our planet.</p>
                     </div>
                 </div>
-            </section>
-            <section class="tavros-group bg-green">
-                <div class="tavros-group__arrows-wrap">
+            </div>
+
+        </section>
+        <section class="premium">
+            <div class="mbox">
+                <div class="premium__block">
+                    <div class="title-row">
+                        <div class="title-row__left">
+                            <svg>
+                                <use xlink:href="#wave-left"></use>
+                            </svg>
+                        </div>
+                        <h3 class="title">pREMIUM dOG food</h3>
+                        <div class="title-row__right">
+                            <svg>
+                                <use xlink:href="#wave-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="premium__text-wrap">
+                        <p class="premium__text text">A little description of why The Pet Butcher is so great. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLoremdolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmoddolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                        <span class="premium__show-more">Learn more</span>
+                    </div>
+                    <div class="premium__img">
+                        <div class="premium__img-unit">
+                            <img src="images/TPB-Badge-Left.png" alt="">
+                        </div>
+                        <div class="premium__img-unit">
+                            <img src="images/TPB-Badge-Middle.png" alt="">
+                        </div>
+                        <div class="premium__img-unit">
+                            <img src="images/TPB-Badge-Right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="mbox">
+                <div class="title-row">
+                    <div class="title-row__left">
+                        <svg>
+                            <use xlink:href="#wave-left"></use>
+                        </svg>
+                    </div>
+                    <h3 class="title">Featured Products</h3>
+                    <div class="title-row__right">
+                        <svg>
+                            <use xlink:href="#wave-right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="products__slider swiper-wrapper">
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-Meat-Mix.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">GRAIN MIX</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            7.80kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-5-Chicken.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            13.80kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-Meat-Mix.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            15.40kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-5-Chicken.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            13.80kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-Meat-Mix.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            15.40kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-5-Chicken.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            13.80kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+                <a href="#" class="products__slide swiper-slide">
+                    <div class="products__slide-img">
+                        <img src="images/TPB-Meat-Mix.png" alt="">
+                    </div>
+                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
+                    <div class="products__slide-bottom">
+                        <div class="products__slide-price">
+                            <span>$</span>
+                            15.40kg
+                        </div>
+                        <div class="products__slide-view">View</div>
+                    </div>
+                </a>
+            </div>
+            <div class="arrows">
+                <div class="arrows__wrap">
+                    <div class="arrows__left">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="btn"><span>VIEW ALL</span></a>
+                    <div class="arrows__right">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best-lives">
+            <div class="mbox">
+                <div class="best-lives__wrap">
+                    <div class="best-lives__img">
+                        <img src="images/TPB-Quality-Pet-Food.png" alt="">
+                    </div>
+                    <div class="best-lives__info">
+                        <h3 class="title">LIVING THEIR BEST LIVES</h3>
+                        <div class="best-lives__subtitle">The best in the business</div>
+                        <p class="best-lives__text text">We don’t use preservatives, fillers, flavours, or colours – just natural meat, vegetables, fruit, rice and pasta that comes from the same sources as what we eat ourselves.</p>
+                        <p class="best-lives__text text">Nothing processed, no “numbers” just good old fashioned fresh and home cooked food with lots of variety which leave our pets feeling and looking great and living their best lives.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="benefits__wrap">
+                <div class="benefits__black-side">
                     <div class="mbox">
-                        <div class="tavros-group__title title">Группа компаний Таврос</div>
-                        <div class="tavros-group__arrows">
-                            <div class="arrows arrows--green-bg">
-                                <div class="arrows__prev"><svg><use xlink:href="#arrow-prev"></use></svg></div>
-                                <div class="slide-count">01</div>
-                                <div class="arrows__next"><svg><use xlink:href="#arrow-next"></use></svg></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tavros-group__slider">
-                    <div class="tavros-group__wrapper swiper-wrapper">
-                        <div class="tavros-group__slide swiper-slide" data-cursor="more-green-cursor" data-cursor-img="./images/more-green-cursor.svg"
-                             style="background-image:url('./images/tavros-group/slide-back-1.png')">
-                            <div class="mbox">
-                                <div class="tavros-group__row">
-                                    <div class="tavros-group__col">
-                                        <div class="tavros-group__mission tavros-group__mission-white">
-                                            <div class="tavros-group__mission-title">Миссия</div>
-                                            <div class="tavros-group__mission-text">Повышение рентабельности сельхозтоваро- производителей России за счёт оказания комплексных услуг в сфере растениеводства</div>
-                                        </div>
-                                        <div class="tavros-group__mission tavros-group__mission-transp">
-                                            <div class="tavros-group__mission-title">Цель</div>
-                                            <div class="tavros-group__mission-text">Комплексное обеспечение сельхозтоваро- производителей России минеральными удобрениями, средствами защиты растений, семенами и агротехническим сопровождением</div>
-                                        </div>
-                                    </div>
-                                    <div class="tavros-group__col">
-                                        <div class="tavros-group__unit1">
-                                            <img src="../images/tavros-group/tavros-group-corn.svg" alt="">
-                                            Топ 35 в России по площади земли в пользовании
-                                        </div>
-                                        <div class="tavros-group__slide-img">
-                                            <img src="./images/tavros-group-slide-1.png" alt="">
-                                        </div>
-                                        <div class="tavros-group__info">
-                                            <div class="tavros-group__info-row">
-                                                <div class="tavros-group__number">112</div>
-                                                <div class="tavros-group__desc">тысяч га<br>пашни</div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tavros-group__slide swiper-slide" data-cursor="more-green-cursor" data-cursor-img="./images/more-green-cursor.svg"
-                             style="background-image:url('./images/tavros-group/slide-back-2.png')">
-                            <div class="mbox">
-                                <div class="tavros-group__row">
-                                    <div class="tavros-group__col">
-                                    </div>
-                                    <div class="tavros-group__col">
-                                        <div class="tavros-group__unit1">
-                                            <img src="../images/tavros-group/tavros-group-pig.svg" alt="">
-                                            Топ 15 производитель свинины в России, IV-компартмент
-                                        </div>
-                                        <div class="tavros-group__slide-img" style="top: 58%;">
-                                            <img src="./images/tavros-group-slide-2.png" alt="">
-                                        </div>
-                                        <div class="tavros-group__info">
-                                            <div class="tavros-group__info-row">
-                                                <div class="tavros-group__number">21</div>
-                                                <div class="tavros-group__desc">тысяч голов га<br>свиноматок<br>
-                                                    <span>без учета ремонтных свинок</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tavros-group__slide swiper-slide" data-cursor="more-green-cursor"
-                             data-cursor-img="./images/more-green-cursor.svg"
-                             style="background-image:url('./images/tavros-group/slide-back-3.png')">
-                            <div class="mbox">
-                                <div class="tavros-group__row">
-                                    <div class="tavros-group__col">
-                                    </div>
-                                    <div class="tavros-group__col">
-                                        <div class="tavros-group__unit1">
-                                            <img src="../images/tavros-group/tavros-group-sugar.svg" alt="">
-                                            Топ 35 в России по площади земли в пользовании
-                                        </div>
-                                        <div class="tavros-group__slide-img">
-                                            <img src="./images/tavros-group-slide-3.png" alt="">
-                                        </div>
-                                        <div class="tavros-group__info">
-                                            <div class="tavros-group__info-row tavros-group__info-row--custom">
-                                                <div class="tavros-group__number">№1</div>
-                                                <div class="tavros-group__desc">по урожайности<br>
-                                                    в республике Башкортостан</div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="ticker">
-                <div class="mbox">
-                    <div class="ticker__title">Направления деятельности</div>
-                </div>
-                <div class="ticker__carousel" data-cursor="ticker-cursor" data-cursor-img="./images/ticker-cursor.svg">
-                    <div class="ticker__line">
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Растениеводство</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">127 000 га пашни</div>
-                                    <div class="ticker__list-item">16 % земельного банка,</div>
-                                    <div class="ticker__list-item">79% аренда земель</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">СГЦ</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">40 000 т пашни</div>
-                                    <div class="ticker__list-item">141 000 мощность банка,</div>
-                                    <div class="ticker__list-item">71% показатель</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Комбикорма</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">40 000 т в час мощность двух линий завода</div>
-                                    <div class="ticker__list-item">141 000 т мощность по хранению</div>
-                                    <div class="ticker__list-item">71% показатель загрузки с возможностью роста</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Растениеводство</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">127 000 га пашни</div>
-                                    <div class="ticker__list-item">16 % земельного банка,</div>
-                                    <div class="ticker__list-item">79% аренда земель</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">СГЦ</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">40 000 т пашни</div>
-                                    <div class="ticker__list-item">141 000 мощность банка,</div>
-                                    <div class="ticker__list-item">71% показатель</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Комбикорма</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">40 000 т в час мощность двух линий завода</div>
-                                    <div class="ticker__list-item">141 000 т мощность по хранению</div>
-                                    <div class="ticker__list-item">71% показатель загрузки с возможностью роста</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ticker__line">
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Производство сахара</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5000 т в сутки мощность завода</div>
-                                    <div class="ticker__list-item">30 000 т мощности для хранения</div>
-                                    <div class="ticker__list-item">89 % обеспеченность свеклой</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Животноводство</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5 животноводческих комплекса</div>
-                                    <div class="ticker__list-item">21 000 поголовье свиноматок</div>
-                                    <div class="ticker__list-item">97% обеспеченность в своем корме</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Производство сахара</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5000 т в сутки мощность завода</div>
-                                    <div class="ticker__list-item">30 000 т мощности для хранения</div>
-                                    <div class="ticker__list-item">89 % обеспеченность свеклой</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Животноводство</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5 животноводческих комплекса</div>
-                                    <div class="ticker__list-item">21 000 поголовье свиноматок</div>
-                                    <div class="ticker__list-item">97% обеспеченность в своем корме</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ticker__line">
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Убой и обвалка</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">216 000 голов убоя в год</div>
-                                    <div class="ticker__list-item">8 т в сутки мощность обвалки</div>
-                                    <div class="ticker__list-item">100% собственное производство</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Кондитерская</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5 000 т в сутки мощность завода</div>
-                                    <div class="ticker__list-item">30 000 т мощности для хранения сахара</div>
-                                    <div class="ticker__list-item">89% обеспеченность потребности завода в сахаре</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="ticker__row">
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Убой и обвалка</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">216 000 голов убоя в год</div>
-                                    <div class="ticker__list-item">8 т в сутки мощность обвалки</div>
-                                    <div class="ticker__list-item">100% собственное производство</div>
-                                </div>
-                            </a>
-                            <a href="#" class="ticker__item">
-                                <div class="ticker__heading">Кондитерская</div>
-                                <div class="ticker__list">
-                                    <div class="ticker__list-item">5 000 т в сутки мощность завода</div>
-                                    <div class="ticker__list-item">30 000 т мощности для хранения сахара</div>
-                                    <div class="ticker__list-item">89% обеспеченность потребности завода в сахаре</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="show-more">
-                    <a href="#" class="show-more__btn">ПОСМОТРЕТЬ ВСЕ НАПРАВЛЕНИЯ</a>
-                </div>
-
-            </section>
-            <section class="main-slider">
-                <div class="ticker__carousel">
-                    <div class="ticker__line">
-                        <div class="ticker__row">
-                            <img src="./images/slider.png" alt="">
-                        </div>
-                        <div class="ticker__row">
-                            <img src="./images/slider.png" alt="">
-                        </div>
-                        <div class="ticker__row">
-                            <img src="./images/slider.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="interconnection bg-green">
-                <div class="mbox">
-                    <div class="title">Взаимосвязь деятельности</div>
-                    <div class="interconnection__subtitle">Наведите, чтобы проследить взаимосвязь</div>
-                    <div class="interconnection__wrap">
-                        <div id="svg-container" class="interconnection__arrows">
-                          <svg width="1209" height="559" viewBox="0 0 1209 559" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <defs id="defs"></defs>
-                            <path id="path-1" class="horizontal"
-                                    d="M138.25 117.5C138.25 117.086 138.586 116.75 139 116.75C139.414 116.75 139.75 117.086 139.75 117.5H138.25ZM654.47 119.47C654.763 119.177 655.237 119.177 655.53 119.47L660.303 124.243C660.596 124.536 660.596 125.01 660.303 125.303C660.01 125.596 659.536 125.596 659.243 125.303L655 121.061L650.757 125.303C650.464 125.596 649.99 125.596 649.697 125.303C649.404 125.01 649.404 124.536 649.697 124.243L654.47 119.47ZM639 139V139.75V139ZM155 139V139.75V139ZM139.75 117.5V123H138.25V117.5H139.75ZM155 138.25L639 138.25V139.75L155 139.75V138.25ZM654.25 123V120H655.75V123H654.25ZM639 138.25C647.422 138.25 654.25 131.422 654.25 123H655.75C655.75 132.251 648.251 139.75 639 139.75V138.25ZM139.75 123C139.75 131.422 146.578 138.25 155 138.25V139.75C145.749 139.75 138.25 132.251 138.25 123H139.75Z" />
-                            <path id="path-2" class="horizontal"
-                                    d="M83.75 162C83.75 162.414 83.4142 162.75 83 162.75C82.5858 162.75 82.25 162.414 82.25 162H83.75ZM654.47 119.47C654.763 119.177 655.237 119.177 655.53 119.47L660.303 124.243C660.596 124.536 660.596 125.01 660.303 125.303C660.01 125.596 659.536 125.596 659.243 125.303L655 121.061L650.757 125.303C650.464 125.596 649.99 125.596 649.697 125.303C649.404 125.01 649.404 124.536 649.697 124.243L654.47 119.47ZM82.25 162V154.776H83.75V162H82.25ZM99 138.026H639V139.526H99V138.026ZM654.25 122.776V120H655.75V122.776H654.25ZM639 138.026C647.422 138.026 654.25 131.199 654.25 122.776H655.75C655.75 132.027 648.251 139.526 639 139.526V138.026ZM82.25 154.776C82.25 145.526 89.7492 138.026 99 138.026V139.526C90.5777 139.526 83.75 146.354 83.75 154.776H82.25Z" />
-                            <path id="path-3" class="vertical"
-                                    d="M6.8 117C6.8 116.558 6.44183 116.2 6 116.2C5.55817 116.2 5.2 116.558 5.2 117L6.8 117ZM5.43432 159.566C5.74674 159.878 6.25327 159.878 6.56569 159.566L11.6569 154.475C11.9693 154.162 11.9693 153.656 11.6569 153.343C11.3444 153.031 10.8379 153.031 10.5255 153.343L6 157.869L1.47452 153.343C1.1621 153.031 0.655567 153.031 0.343147 153.343C0.0307278 153.656 0.0307279 154.162 0.343147 154.475L5.43432 159.566ZM5.2 117L5.2 159L6.8 159L6.8 117L5.2 117Z" />
-                            <path id="path-4" class="vertical"
-                                    d="M6.8 395C6.8 394.558 6.44183 394.2 6 394.2C5.55817 394.2 5.2 394.558 5.2 395L6.8 395ZM5.43432 437.566C5.74674 437.878 6.25327 437.878 6.56569 437.566L11.6569 432.475C11.9693 432.162 11.9693 431.656 11.6569 431.343C11.3444 431.031 10.8379 431.031 10.5255 431.343L6 435.869L1.47452 431.343C1.1621 431.031 0.655567 431.031 0.343147 431.343C0.0307278 431.656 0.0307279 432.162 0.343147 432.475L5.43432 437.566ZM5.2 395L5.2 437L6.8 437L6.8 395L5.2 395Z" />
-                            <path id="path-5" class="horizontal-ltr"
-                                    d="M906 553.8C906.442 553.8 906.8 553.442 906.8 553C906.8 552.558 906.442 552.2 906 552.2L906 553.8ZM865.434 552.434C865.122 552.747 865.122 553.253 865.434 553.566L870.525 558.657C870.838 558.969 871.344 558.969 871.657 558.657C871.969 558.344 871.969 557.838 871.657 557.525L867.131 553L871.657 548.475C871.969 548.162 871.969 547.656 871.657 547.343C871.344 547.031 870.838 547.031 870.525 547.343L865.434 552.434ZM906 552.2L866 552.2L866 553.8L906 553.8L906 552.2Z" />
-                            <path id="path-6" class="horizontal-ltr"
-                                    d="M906 277.8C906.442 277.8 906.8 277.442 906.8 277C906.8 276.558 906.442 276.2 906 276.2L906 277.8ZM865.434 276.434C865.122 276.747 865.122 277.253 865.434 277.566L870.525 282.657C870.838 282.969 871.344 282.969 871.657 282.657C871.969 282.344 871.969 281.838 871.657 281.525L867.131 277L871.657 272.475C871.969 272.162 871.969 271.656 871.657 271.343C871.344 271.031 870.838 271.031 870.525 271.343L865.434 276.434ZM906 276.2L866 276.2L866 277.8L906 277.8L906 276.2Z" />
-                            <path id="path-7" class="vertical"
-                                    d="M727.8 119C727.8 118.558 727.442 118.2 727 118.2C726.558 118.2 726.2 118.558 726.2 119H727.8ZM726.434 159.566C726.747 159.878 727.253 159.878 727.566 159.566L732.657 154.475C732.969 154.162 732.969 153.656 732.657 153.343C732.344 153.031 731.838 153.031 731.525 153.343L727 157.869L722.475 153.343C722.162 153.031 721.656 153.031 721.343 153.343C721.031 153.656 721.031 154.162 721.343 154.475L726.434 159.566ZM726.2 119V159H727.8V119H726.2Z" />
-                            <path id="path-8" class="horizontal-ltr"
-                                    d="M588 553.8C588.442 553.8 588.8 553.442 588.8 553C588.8 552.558 588.442 552.2 588 552.2L588 553.8ZM547.434 552.434C547.122 552.747 547.122 553.253 547.434 553.566L552.525 558.657C552.838 558.969 553.344 558.969 553.657 558.657C553.969 558.344 553.969 557.838 553.657 557.525L549.131 553L553.657 548.475C553.969 548.162 553.969 547.656 553.657 547.343C553.344 547.031 552.838 547.031 552.525 547.343L547.434 552.434ZM588 552.2L548 552.2L548 553.8L588 553.8L588 552.2Z" />
-                            <path id="path-9" class="vertical"
-                                    d="M1183.43 544.434C1183.12 544.747 1183.12 545.253 1183.43 545.566L1188.53 550.657C1188.84 550.969 1189.34 550.969 1189.66 550.657C1189.97 550.344 1189.97 549.838 1189.66 549.525L1185.13 545L1189.66 540.475C1189.97 540.162 1189.97 539.656 1189.66 539.343C1189.34 539.031 1188.84 539.031 1188.53 539.343L1183.43 544.434ZM1184 1.8H1192V0.2H1184V1.8ZM1207.2 17V529H1208.8V17H1207.2ZM1192 544.2H1184V545.8H1192V544.2ZM1207.2 529C1207.2 537.395 1200.39 544.2 1192 544.2V545.8C1201.28 545.8 1208.8 538.278 1208.8 529H1207.2ZM1192 1.8C1200.39 1.8 1207.2 8.60527 1207.2 17H1208.8C1208.8 7.72162 1201.28 0.2 1192 0.2V1.8Z" />
-                            <path id="path-10" class="vertical"
-                                    d="M1183.43 269.434C1183.12 269.747 1183.12 270.253 1183.43 270.566L1188.53 275.657C1188.84 275.969 1189.34 275.969 1189.66 275.657C1189.97 275.344 1189.97 274.838 1189.66 274.525L1185.13 270L1189.66 265.475C1189.97 265.162 1189.97 264.656 1189.66 264.343C1189.34 264.031 1188.84 264.031 1188.53 264.343L1183.43 269.434ZM1184 1.8H1192V0.2H1184V1.8ZM1207.2 17V254H1208.8V17H1207.2ZM1192 269.2H1184V270.8H1192V269.2ZM1207.2 254C1207.2 262.395 1200.39 269.2 1192 269.2V270.8C1201.28 270.8 1208.8 263.278 1208.8 254H1207.2ZM1192 1.8C1200.39 1.8 1207.2 8.60527 1207.2 17H1208.8C1208.8 7.72162 1201.28 0.2 1192 0.2V1.8Z" />
-                            <path id="path-11" class="horizontal-ltr"
-                                    d="M647.566 390.434C647.253 390.122 646.747 390.122 646.434 390.434L641.343 395.525C641.031 395.838 641.031 396.344 641.343 396.657C641.656 396.969 642.162 396.969 642.475 396.657L647 392.131L651.525 396.657C651.838 396.969 652.344 396.969 652.657 396.657C652.969 396.344 652.969 395.838 652.657 395.525L647.566 390.434ZM1039.8 437V430.649H1038.2V437H1039.8ZM1023 413.849H663V415.449H1023V413.849ZM647.8 398.649V391H646.2V398.649H647.8ZM663 413.849C654.605 413.849 647.8 407.043 647.8 398.649H646.2C646.2 407.927 653.722 415.449 663 415.449V413.849ZM1039.8 430.649C1039.8 421.37 1032.28 413.849 1023 413.849V415.449C1031.39 415.449 1038.2 422.254 1038.2 430.649H1039.8Z" />
-                            <path id="path-12" class="horizontal-ltr"
-                                    d="M647.566 390.434C647.253 390.122 646.747 390.122 646.434 390.434L641.343 395.525C641.031 395.838 641.031 396.344 641.343 396.657C641.656 396.969 642.162 396.969 642.475 396.657L647 392.131L651.525 396.657C651.838 396.969 652.344 396.969 652.657 396.657C652.969 396.344 652.969 395.838 652.657 395.525L647.566 390.434ZM726.8 437V430.649H725.2V437H726.8ZM710 413.849H663V415.449H710V413.849ZM647.8 398.649V391H646.2V398.649H647.8ZM663 413.849C654.605 413.849 647.8 407.043 647.8 398.649H646.2C646.2 407.927 653.722 415.449 663 415.449V413.849ZM726.8 430.649C726.8 421.37 719.278 413.849 710 413.849V415.449C718.395 415.449 725.2 422.254 725.2 430.649H726.8Z" />
-                            <path id="path-13" class="horizontal"
-                                    d="M404.566 391.434C404.253 391.122 403.747 391.122 403.434 391.434L398.343 396.525C398.031 396.838 398.031 397.344 398.343 397.657C398.656 397.969 399.162 397.969 399.475 397.657L404 393.131L408.525 397.657C408.838 397.969 409.344 397.969 409.657 397.657C409.969 397.344 409.969 396.838 409.657 396.525L404.566 391.434ZM88.3 437V430.5H86.7V437H88.3ZM103.5 415.3H388V413.7H103.5V415.3ZM404.8 398.5V392H403.2V398.5H404.8ZM388 415.3C397.278 415.3 404.8 407.778 404.8 398.5H403.2C403.2 406.895 396.395 413.7 388 413.7V415.3ZM88.3 430.5C88.3 422.105 95.1053 415.3 103.5 415.3V413.7C94.2216 413.7 86.7 421.222 86.7 430.5H88.3Z" />
-                            <path id="path-14" class="horizontal"
-                                    d="M647.566 390.434C647.253 390.122 646.747 390.122 646.434 390.434L641.343 395.525C641.031 395.838 641.031 396.344 641.343 396.657C641.656 396.969 642.162 396.969 642.474 396.657L647 392.131L651.525 396.657C651.838 396.969 652.344 396.969 652.657 396.657C652.969 396.344 652.969 395.838 652.657 395.525L647.566 390.434ZM88.8 437V430H87.2V437H88.8ZM104 414.8H631V413.2H104V414.8ZM647.8 398V391H646.2V398H647.8ZM631 414.8C640.278 414.8 647.8 407.278 647.8 398H646.2C646.2 406.395 639.395 413.2 631 413.2V414.8ZM88.8 430C88.8 421.605 95.6053 414.8 104 414.8V413.2C94.7216 413.2 87.2 420.722 87.2 430H88.8Z" />
-                            <path id="path-15" class="horizontal"
-                                    d="M647.566 390.934C647.253 390.622 646.747 390.622 646.434 390.934L641.343 396.025C641.031 396.338 641.031 396.844 641.343 397.157C641.656 397.469 642.162 397.469 642.474 397.157L647 392.631L651.525 397.157C651.838 397.469 652.344 397.469 652.657 397.157C652.969 396.844 652.969 396.338 652.657 396.025L647.566 390.934ZM87.2 389V398H88.8V389H87.2ZM104 414.8H631V413.2H104V414.8ZM647.8 398V391.5H646.2V398H647.8ZM631 414.8C640.278 414.8 647.8 407.278 647.8 398H646.2C646.2 406.395 639.395 413.2 631 413.2V414.8ZM87.2 398C87.2 407.278 94.7216 414.8 104 414.8V413.2C95.6053 413.2 88.8 406.395 88.8 398H87.2Z" />
-                            <path id="path-16" class="horizontal"
-                                    d="M647.566 390.434C647.253 390.122 646.747 390.122 646.434 390.434L641.343 395.525C641.031 395.838 641.031 396.344 641.343 396.657C641.656 396.969 642.162 396.969 642.475 396.657L647 392.131L651.525 396.657C651.838 396.969 652.344 396.969 652.657 396.657C652.969 396.344 652.969 395.838 652.657 395.525L647.566 390.434ZM477.8 438V430.242H476.2V438H477.8ZM493 415.042H631V413.442H493V415.042ZM647.8 398.242V391H646.2V398.242H647.8ZM631 415.042C640.278 415.042 647.8 407.52 647.8 398.242H646.2C646.2 406.636 639.395 413.442 631 413.442V415.042ZM477.8 430.242C477.8 421.847 484.605 415.042 493 415.042V413.442C483.722 413.442 476.2 420.963 476.2 430.242H477.8Z" />
-                            <path id="path-17" class="horizontal"
-                                    d="M405.066 391.434C404.753 391.122 404.247 391.122 403.934 391.434L398.843 396.525C398.531 396.838 398.531 397.344 398.843 397.657C399.156 397.969 399.662 397.969 399.975 397.657L404.5 393.131L409.025 397.657C409.338 397.969 409.844 397.969 410.157 397.657C410.469 397.344 410.469 396.838 410.157 396.525L405.066 391.434ZM87.2 390V398.5H88.8V390H87.2ZM104 415.3H388.5V413.7H104V415.3ZM405.3 398.5V392H403.7V398.5H405.3ZM388.5 415.3C397.778 415.3 405.3 407.778 405.3 398.5H403.7C403.7 406.895 396.895 413.7 388.5 413.7V415.3ZM87.2 398.5C87.2 407.778 94.7216 415.3 104 415.3V413.7C95.6053 413.7 88.8 406.895 88.8 398.5H87.2Z" />
-                            <path id="path-18" class="vertical-btt"
-                                  d="M436.2 434C436.2 434.442 436.558 434.8 437 434.8C437.442 434.8 437.8 434.442 437.8 434H436.2ZM437.566 393.434C437.253 393.122 436.747 393.122 436.434 393.434L431.343 398.525C431.031 398.838 431.031 399.344 431.343 399.657C431.656 399.969 432.162 399.969 432.475 399.657L437 395.131L441.525 399.657C441.838 399.969 442.344 399.969 442.657 399.657C442.969 399.344 442.969 398.838 442.657 398.525L437.566 393.434ZM437.8 434V394H436.2V434H437.8Z"/>
-                          </svg>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Растениеводство</div>
-                                <div class="interconnection__descr">«Башкир-Агроинвест»</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--1"></div>
-                                <div class="interconnection__icon interconnection__icon--2"></div>
-                                <div class="interconnection__icon interconnection__icon--3"></div>
-                                <div class="interconnection__icon interconnection__icon--4"></div>
-                                <div class="interconnection__icon interconnection__icon--5"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Производство комбикормов</div>
-                                <div class="interconnection__descr">ООО «Давлекановский КХП №1»</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--6"></div>
-                                <div class="interconnection__icon interconnection__icon--12"></div>
-                                <div class="interconnection__icon interconnection__icon--5"></div>
-                                <div class="interconnection__icon interconnection__icon--7"></div>
-                                <div class="interconnection__icon interconnection__icon--8"></div>
-                                <div class="interconnection__icon interconnection__icon--9"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Производство сахара</div>
-                                <div class="interconnection__descr">АО «Чишминский сахарный завод»</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--10"></div>
-                                <div class="interconnection__icon interconnection__icon--11"></div>
-                                <div class="interconnection__icon interconnection__icon--12"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Фирменная розница</div>
-                                <div class="interconnection__descr"></div>
-                            </div>
-                            <div class="interconnection__icons-wrap"></div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Оптовые продажи</div>
-                                <div class="interconnection__descr">Внутренний рынок и экспорт</div>
-                            </div>
-                            <div class="interconnection__icons-wrap"></div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Молочное скотоводство</div>
-                                <div class="interconnection__descr">ООО «Башкир-Агроинвест»</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--13"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Кондитерское производство</div>
-                                <div class="interconnection__descr">ООО «Башбиоресурс»</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--14"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Мясопереработка</div>
-                                <div class="interconnection__descr">ООО "Раевский мясокомбинат "Альшей мясо"</div>
-                            </div>
-                            <div class="interconnection__icons-wrap">
-                                <div class="interconnection__icon interconnection__icon--15"></div>
-                                <div class="interconnection__icon interconnection__icon--16"></div>
-                                <div class="interconnection__icon interconnection__icon--17"></div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Товарное свиноводство</div>
-                                <div class="interconnection__descr">ООО «Башкирская мясная компания» <br> ООО «Уральская  мясная компания»</div>
-                            </div>
-                        </div>
-                        <div class="interconnection__unit" data-stage="0">
-                            <div class="interconnection__name">
-                                <div class="interconnection__title">Племенное свиноводство</div>
-                                <div class="interconnection__descr">«Башкирская мясная компания»</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="main-products bg-green">
-                <div class="mbox">
-                    <div class="title-wrap">
-                        <div class="title title--white">Продукция</div>
-                        <div class="main-products__arrows">
-                            <div class="arrows arrows--green-bg">
-                                <div class="arrows__prev"><svg><use xlink:href="#arrow-prev"></use></svg></div>
-                                <div class="arrows__next"><svg><use xlink:href="#arrow-next"></use></svg></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-products__slider">
-                        <div class="swiper-wrapper">
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-1.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="25">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-1.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Ячмень</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-2.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="100">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-2.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Пшеница</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-1.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="72">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-3.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Овес</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-2.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="25">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-4.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Рожь</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-1.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="40">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-1.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Ячмень</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-2.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="100">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-2.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Пшеница</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-1.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="69">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-3.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Овес</div>
-                            </div>
-                            <div class="main-products__slide swiper-slide" data-cursor="main-products-cursor"
-                                 data-cursor-img="./images/main-products/cursor-2.png">
-                                <div class="main-products__percent">
-                                    <span><span data-percent="50">0</span><span>%</span></span>
-                                    <svg viewBox="0 0 62 63" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M30.9896 0.754944C34.9607 0.754944 38.8928 1.53762 42.5616 3.0583C46.2304 4.57898 49.564 6.80789 52.3721 9.61779C55.1801 12.4277 57.4076 15.7636 58.9273 19.4349C60.447 23.1063 61.2292 27.0413 61.2292 31.0152C61.2292 34.9891 60.447 38.9241 58.9273 42.5954C57.4076 46.2668 55.1801 49.6027 52.3721 52.4126C49.564 55.2225 46.2304 57.4514 42.5616 58.9721C38.8928 60.4927 34.9607 61.2754 30.9896 61.2754C27.0185 61.2754 23.0864 60.4927 19.4176 58.9721C15.7488 57.4514 12.4152 55.2225 9.60714 52.4126C6.79911 49.6027 4.57164 46.2668 3.05192 42.5954C1.53219 38.924 0.749998 34.9891 0.75 31.0152C0.750002 27.0413 1.5322 23.1063 3.05193 19.4349C4.57165 15.7635 6.79913 12.4277 9.60717 9.61777C12.4152 6.80788 15.7488 4.57897 19.4176 3.05829C23.0864 1.53762 27.0186 0.754941 30.9896 0.754944L30.9896 0.754944Z"/>
-                                    </svg>
-                                </div>
-                                <div class="main-products__img">
-                                    <img src="./images/main-products/main-products-4.svg" alt="">
-                                </div>
-                                <div class="main-products__title">Рожь</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="territory">
-                <div class="mbox">
-                    <div class="heading">Территория присутствия</div>
-                    <div class="territory__inner">
-                        <div class="territory__map">
-                            <img src="./images/territory-map.png" alt="">
-                            <div class="territory__map-marker">
-                                <svg><use xlink:href="#marker-ico"></use></svg>
-                                <div class="territory__map-city">Уфа</div>
-                            </div>
-                        </div>
-                        <div class="territory__row">
-                            <div class="territory__col">
-                                <div class="territory__text">Свяжитесь с нами</div>
-                            </div>
-                            <div class="territory__col">
-                                <div class="territory__text">
-                                    <a href="tel:+74955106383" class="territory__link">+7 (495) 510-63-83</a>
-                                    <a href="mailto:info@avgagro.ru" class="territory__link">info@avgagro.ru </a>
-                                </div>
-                                <div class="territory__text">
-                                    <a href="tel:+74993460808" class="territory__link">+7 (499) 346-08-08</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="territory__block">
-                          <div class="territory__item" data-position="0">
-                            <svg width="73" height="76" viewBox="0 0 73 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M58.7497 49.9337C50.5909 64.7119 27.718 65.5337 15.5684 58.8262C3.41867 52.1186 6.59305 40.4217 14.7518 25.6434C22.9105 10.8652 45.6329 9.2329 57.7826 15.9405C69.9322 22.648 66.9084 35.1554 58.7497 49.9337Z" fill="#627640"/>
-                              <g clip-path="url(#clip0_241_18238)">
-                                <rect x="26.5193" y="29.8214" width="22.4688" height="3.4375" stroke="white" stroke-width="2"/>
-                                <mask id="path-3-inside-1_241_18238" fill="white">
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M49.1262 32.4464H27.4491L26.669 34.6098C25.6754 37.3657 25.1673 40.2731 25.1673 43.2027C25.1673 43.5853 25.2221 43.9581 25.3254 44.3122L24.4761 45.0155C23.4503 45.8648 23.4503 47.242 24.4761 48.0914C25.5019 48.9407 27.165 48.9407 28.1908 48.0914L29.1092 47.3309L30.5992 47.7741C35.6162 49.2664 40.9591 49.2664 45.9761 47.7741L47.2251 47.4026L48.057 48.0914C49.0828 48.9407 50.7459 48.9407 51.7717 48.0914C52.7975 47.242 52.7975 45.8648 51.7717 45.0155L51.0234 44.3958C51.2149 43.8706 51.3095 43.3032 51.2893 42.7184C51.199 40.102 50.7482 37.5105 49.9496 35.0173L49.1262 32.4464Z"/>
-                                </mask>
-                                <path d="M27.4491 32.4464V30.4464H26.0441L25.5676 31.768L27.4491 32.4464ZM49.1262 32.4464L51.0309 31.8363L50.5857 30.4464H49.1262V32.4464ZM26.669 34.6098L24.7876 33.9315L26.669 34.6098ZM25.3254 44.3122L26.601 45.8527L27.6135 45.0142L27.2454 43.7522L25.3254 44.3122ZM24.4761 45.0155L23.2006 43.475H23.2006L24.4761 45.0155ZM24.4761 48.0914L25.7517 46.5509L25.7517 46.5509L24.4761 48.0914ZM28.1908 48.0914L26.9153 46.5509L26.9153 46.5509L28.1908 48.0914ZM29.1092 47.3309L29.6794 45.4139L28.656 45.1095L27.8337 45.7904L29.1092 47.3309ZM30.5992 47.7741L31.1694 45.8571L30.5992 47.7741ZM45.9761 47.7741L45.4059 45.8571H45.4059L45.9761 47.7741ZM47.2251 47.4026L48.5007 45.8621L47.6783 45.1812L46.6549 45.4856L47.2251 47.4026ZM48.057 48.0914L46.7815 49.6318L48.057 48.0914ZM51.7717 48.0914L50.4962 46.5509V46.5509L51.7717 48.0914ZM51.7717 45.0155L50.4962 46.5559L50.4962 46.5559L51.7717 45.0155ZM51.0234 44.3958L49.1444 43.7108L48.6611 45.0364L49.7479 45.9363L51.0234 44.3958ZM51.2893 42.7184L53.2881 42.6494V42.6494L51.2893 42.7184ZM49.9496 35.0173L51.8543 34.4073V34.4073L49.9496 35.0173ZM27.4491 34.4464H49.1262V30.4464H27.4491V34.4464ZM28.5505 35.2882L29.3305 33.1248L25.5676 31.768L24.7876 33.9315L28.5505 35.2882ZM27.1673 43.2027C27.1673 40.5044 27.6353 37.8265 28.5505 35.2882L24.7876 33.9315C23.7155 36.9049 23.1673 40.0418 23.1673 43.2027H27.1673ZM27.2454 43.7522C27.1946 43.5778 27.1673 43.3935 27.1673 43.2027H23.1673C23.1673 43.7772 23.2497 44.3384 23.4054 44.8722L27.2454 43.7522ZM24.0499 42.7718L23.2006 43.475L25.7517 46.5559L26.601 45.8527L24.0499 42.7718ZM23.2006 43.475C22.2653 44.2495 21.7068 45.3552 21.7068 46.5534C21.7068 47.7516 22.2653 48.8574 23.2006 49.6318L25.7517 46.5509C25.7259 46.5295 25.7109 46.5129 25.7033 46.5033C25.6956 46.4937 25.694 46.4897 25.6953 46.4922C25.6965 46.4948 25.6996 46.5019 25.7023 46.5135C25.705 46.525 25.7068 46.5386 25.7068 46.5534C25.7068 46.5682 25.705 46.5818 25.7023 46.5934C25.6996 46.6049 25.6965 46.6121 25.6953 46.6146C25.694 46.6172 25.6956 46.6132 25.7033 46.6036C25.7109 46.5939 25.7259 46.5773 25.7517 46.5559L23.2006 43.475ZM23.2006 49.6318C24.9664 51.0939 27.7006 51.0939 29.4664 49.6318L26.9153 46.5509C26.6295 46.7876 26.0375 46.7876 25.7517 46.5509L23.2006 49.6318ZM29.4664 49.6318L30.3848 48.8713L27.8337 45.7904L26.9153 46.5509L29.4664 49.6318ZM31.1694 45.8571L29.6794 45.4139L28.539 49.2479L30.029 49.6911L31.1694 45.8571ZM45.4059 45.8571C40.7609 47.2387 35.8143 47.2387 31.1694 45.8571L30.029 49.6911C35.4181 51.2941 41.1572 51.2941 46.5463 49.6911L45.4059 45.8571ZM46.6549 45.4856L45.4059 45.8571L46.5463 49.6911L47.7953 49.3195L46.6549 45.4856ZM49.3325 46.5509L48.5007 45.8621L45.9496 48.943L46.7815 49.6318L49.3325 46.5509ZM50.4962 46.5509C50.2104 46.7876 49.6183 46.7876 49.3325 46.5509L46.7815 49.6318C48.5472 51.0939 51.2815 51.0939 53.0472 49.6318L50.4962 46.5509ZM50.4962 46.5559C50.522 46.5773 50.5369 46.5939 50.5446 46.6036C50.5522 46.6132 50.5538 46.6172 50.5525 46.6146C50.5513 46.6121 50.5482 46.6049 50.5455 46.5934C50.5428 46.5818 50.541 46.5682 50.541 46.5534C50.541 46.5386 50.5428 46.525 50.5455 46.5135C50.5482 46.5019 50.5513 46.4948 50.5525 46.4922C50.5538 46.4897 50.5522 46.4937 50.5446 46.5033C50.5369 46.5129 50.522 46.5295 50.4962 46.5509L53.0472 49.6318C53.9825 48.8574 54.541 47.7516 54.541 46.5534C54.541 45.3552 53.9825 44.2495 53.0472 43.475L50.4962 46.5559ZM49.7479 45.9363L50.4962 46.5559L53.0472 43.475L52.2989 42.8554L49.7479 45.9363ZM49.2905 42.7874C49.3017 43.111 49.2495 43.4226 49.1444 43.7108L52.9024 45.0809C53.1803 44.3186 53.3173 43.4954 53.2881 42.6494L49.2905 42.7874ZM48.045 35.6274C48.7874 37.9454 49.2065 40.3548 49.2905 42.7874L53.2881 42.6494C53.1915 39.8492 52.709 37.0756 51.8543 34.4073L48.045 35.6274ZM47.2215 33.0565L48.045 35.6274L51.8543 34.4073L51.0309 31.8363L47.2215 33.0565Z" fill="white" mask="url(#path-3-inside-1_241_18238)"/>
-                                <mask id="path-5-inside-2_241_18238" fill="white">
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M48.1836 30.6339H27.6271C27.1971 29.8365 26.9504 28.9072 26.9504 27.9152C26.9504 24.9492 29.1548 22.5448 31.874 22.5448C32.7608 22.5448 33.5929 22.8005 34.3116 23.2481C35.1754 21.6994 36.7374 20.6652 38.5208 20.6652C40.124 20.6652 41.5483 21.501 42.4473 22.7949C42.9171 22.6324 43.4175 22.5448 43.9367 22.5448C46.6559 22.5448 48.8602 24.9492 48.8602 27.9152C48.8602 28.9072 48.6136 29.8365 48.1836 30.6339Z"/>
-                                </mask>
-                                <path d="M27.6271 30.6339L25.8667 31.5832L26.4333 32.6339H27.6271V30.6339ZM48.1836 30.6339V32.6339H49.3773L49.9439 31.5832L48.1836 30.6339ZM34.3116 23.2481L33.2543 24.9458L35.0358 26.0552L36.0582 24.2224L34.3116 23.2481ZM42.4473 22.7949L40.8048 23.9361L41.6691 25.1801L43.1008 24.6851L42.4473 22.7949ZM27.6271 32.6339H48.1836V28.6339H27.6271V32.6339ZM29.3874 29.6847C29.1139 29.1774 28.9504 28.5742 28.9504 27.9152H24.9504C24.9504 29.2403 25.2802 30.4955 25.8667 31.5832L29.3874 29.6847ZM28.9504 27.9152C28.9504 25.8867 30.4193 24.5448 31.874 24.5448V20.5448C27.8902 20.5448 24.9504 24.0117 24.9504 27.9152H28.9504ZM31.874 24.5448C32.3684 24.5448 32.8366 24.6857 33.2543 24.9458L35.3688 21.5504C34.3491 20.9154 33.1532 20.5448 31.874 20.5448V24.5448ZM36.0582 24.2224C36.6134 23.2271 37.5496 22.6652 38.5208 22.6652V18.6652C35.9251 18.6652 33.7374 20.1718 32.5649 22.2738L36.0582 24.2224ZM38.5208 22.6652C39.3975 22.6652 40.2369 23.1187 40.8048 23.9361L44.0897 21.6537C42.8596 19.8832 40.8505 18.6652 38.5208 18.6652V22.6652ZM43.1008 24.6851C43.3648 24.5938 43.6445 24.5448 43.9367 24.5448V20.5448C43.1905 20.5448 42.4694 20.6711 41.7937 20.9047L43.1008 24.6851ZM43.9367 24.5448C45.3913 24.5448 46.8602 25.8867 46.8602 27.9152H50.8602C50.8602 24.0117 47.9204 20.5448 43.9367 20.5448V24.5448ZM46.8602 27.9152C46.8602 28.5742 46.6967 29.1774 46.4232 29.6847L49.9439 31.5832C50.5304 30.4955 50.8602 29.2403 50.8602 27.9152H46.8602Z" fill="white" mask="url(#path-5-inside-2_241_18238)"/>
-                                <line x1="30.4219" y1="26.0804" x2="31.6957" y2="26.59" stroke="white" stroke-width="2"/>
-                                <line y1="-1" x2="1.37195" y2="-1" transform="matrix(0.837203 -0.546892 0.54689 0.837204 34.5818 27.7592)" stroke="white" stroke-width="2"/>
-                                <line x1="37.9803" y1="23.5567" x2="38.9865" y2="24.4893" stroke="white" stroke-width="2"/>
-                                <line x1="39.0057" y1="27.0683" x2="40.3697" y2="26.921" stroke="white" stroke-width="2"/>
-                                <line y1="-1" x2="1.37195" y2="-1" transform="matrix(0.275266 -0.961368 0.961367 0.275269 42.7285 25.6958)" stroke="white" stroke-width="2"/>
-                                <line y1="-1" x2="1.37195" y2="-1" transform="matrix(0.915557 0.402188 -0.402187 0.915558 43.6443 27.0089)" stroke="white" stroke-width="2"/>
-                              </g>
-                              <defs>
-                                <clipPath id="territory-clip-2">
-                                  <path d="M58.7497 49.9337C50.5909 64.7119 27.718 65.5337 15.5684 58.8262C3.41867 52.1186 6.59305 40.4217 14.7518 25.6434C22.9105 10.8652 45.6329 9.2329 57.7826 15.9405C69.9322 22.648 66.9084 35.1554 58.7497 49.9337Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg"
-                                     clip-path="url(#territory-clip-2)">
-                              </image>
+                        <h3 class="title">Key benefits to our products</h3>
+                        <div class="benefits__subtitle">We strive to deliver the best locally sourced products for your pets. </div>
+                        <div class="benefits__text-wrap">
+                            <svg>
+                                <use xlink:href="#tick-ico"></use>
                             </svg>
-                        
-                          </div>
-                          <div class="territory__item" data-position="0">
-                            <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M61.8249 32.6337C61.8249 51.4404 41.8667 59.9135 24.1512 59.9135C6.4358 59.9135 3.24738e-05 45.2801 3.24738e-05 26.4734C3.24738e-05 7.66667 22.0568 0 39.7722 0C57.4876 0 61.8249 13.827 61.8249 32.6337Z" fill="#627640"/>
-                              <path d="M29.7474 18.9364C32.6562 18.9364 35.3727 19.7336 37.6675 21.1191C39.0754 17.7344 41.5872 16.4565 45.0356 17.8103C45.2341 17.8862 45.3829 18.0318 45.476 18.2089C47.4234 21.8782 47.4234 25.44 43.3858 27.4961C44.1673 29.2169 44.5953 31.1148 44.5953 33.1077C44.5953 41.3194 37.5248 47.2789 29.7412 47.2789C21.9575 47.2789 14.8871 41.3194 14.8871 33.1077C14.8871 31.1148 15.3213 29.2169 16.0965 27.4961C12.0714 25.44 12.0652 21.8782 14.0188 18.2089C14.1119 18.0318 14.2607 17.8926 14.4592 17.8103C17.9076 16.4565 20.4256 17.7344 21.8273 21.1191C24.1221 19.7336 26.8386 18.9364 29.7474 18.9364ZM39.1064 22.0997C40.4833 23.1625 41.6679 24.4721 42.5858 25.9651C45.6186 24.4468 45.5256 22.0743 44.1363 19.3097C41.4942 18.3987 40.0429 19.6134 39.1064 22.0997ZM16.9152 25.9714C17.8331 24.4784 19.0177 23.1688 20.3946 22.106C19.4581 19.6134 18.0068 18.405 15.3647 19.3223C13.9692 22.0807 13.8824 24.4468 16.9152 25.9714ZM27.5891 36.1697C28.2713 36.1697 28.8295 36.739 28.8295 37.4349C28.8295 38.1309 28.2713 38.7002 27.5891 38.7002C26.9068 38.7002 26.3486 38.1309 26.3486 37.4349C26.3486 36.7327 26.9006 36.1697 27.5891 36.1697ZM31.9057 36.1697C32.588 36.1697 33.1462 36.739 33.1462 37.4349C33.1462 38.1309 32.588 38.7002 31.9057 38.7002C31.2235 38.7002 30.6653 38.1309 30.6653 37.4349C30.6653 36.7327 31.2235 36.1697 31.9057 36.1697ZM24.426 26.8255C25.3563 26.8255 26.1068 27.7555 26.1068 28.9069C26.1068 30.0583 25.3563 30.9883 24.426 30.9883C23.4957 30.9883 22.7452 30.0583 22.7452 28.9069C22.7452 27.7555 23.4957 26.8255 24.426 26.8255ZM35.0688 26.8255C35.9991 26.8255 36.7496 27.7555 36.7496 28.9069C36.7496 30.0583 35.9991 30.9883 35.0688 30.9883C34.1385 30.9883 33.388 30.0583 33.388 28.9069C33.388 27.7555 34.1385 26.8255 35.0688 26.8255ZM29.7474 32.4054C32.619 32.4054 37.5621 33.7909 37.5621 37.4349C37.5621 41.079 32.619 42.4645 29.7474 42.4645C26.8758 42.4645 21.9327 41.079 21.9327 37.4349C21.9389 33.7909 26.8758 32.4054 29.7474 32.4054ZM29.7474 34.1389C27.9674 34.1389 23.6383 34.9803 23.6383 37.4349C23.6383 39.8896 27.9674 40.731 29.7474 40.731C31.5274 40.731 35.8565 39.8896 35.8565 37.4349C35.8565 34.9803 31.5274 34.1389 29.7474 34.1389ZM29.7474 20.6699C22.9003 20.6699 16.5927 25.8512 16.5927 33.1077C16.5927 40.3641 22.8941 45.5454 29.7474 45.5454C36.6007 45.5454 42.9021 40.3641 42.9021 33.1077C42.9021 25.8512 36.5945 20.6699 29.7474 20.6699Z" fill="white"/>
-                              <defs>
-                                <clipPath id="pig-clip">
-                                  <path d="M61.8249 32.6337C61.8249 51.4404 41.8667 59.9135 24.1512 59.9135C6.4358 59.9135 3.24738e-05 45.2801 3.24738e-05 26.4734C3.24738e-05 7.66667 22.0568 0 39.7722 0C57.4876 0 61.8249 13.827 61.8249 32.6337Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg" clip-path="url(#pig-clip)">
-                              </image>
-                            </svg>
-                          </div>
-                          <div class="territory__item" data-position="0">
-                            <svg width="81" height="85" viewBox="0 0 81 85" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M65.9394 52.3228C53.8944 70.5832 29.9802 74.3655 16.3967 65.4055C2.81319 56.4454 7.55018 43.1435 18.375 26.733C29.1998 10.3225 48.951 8.53703 62.5345 17.4971C76.118 26.4571 76.7642 35.9123 65.9394 52.3228Z" fill="#627640"/>
-                              <g clip-path="url(#clip0_265_19267)">
-                                <path d="M39.8892 23.7518C39.1289 25.7814 35.7731 30.8811 40.3315 39.7026C44.1005 46.9964 41.2063 53.8029 40.2821 55.9221" stroke="white" stroke-width="1.6"/>
-                                <path d="M54.1143 31.9645C52.7367 33.6377 49.9982 39.0937 40.0793 39.5568C31.8782 39.9396 27.4307 45.8494 26.0576 47.7093" stroke="white" stroke-width="1.6"/>
-                                <line x1="32.857" y1="41.459" x2="39.5951" y2="45.3493" stroke="white" stroke-width="1.6"/>
-                                <line x1="47.5775" y1="38.0987" x2="40.8395" y2="34.2085" stroke="white" stroke-width="1.6"/>
-                                <line x1="27.754" y1="44.7706" x2="38.9841" y2="51.2543" stroke="white" stroke-width="1.6"/>
-                                <line x1="52.8495" y1="34.1547" x2="41.6194" y2="27.671" stroke="white" stroke-width="1.6"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_265_19267">
-                                  <rect width="32" height="32" fill="white" transform="translate(24.457 23.7518)"/>
-                                </clipPath>
-                              </defs>
-                              <defs>
-                                <clipPath id="territory-clip-3">
-                                  <path d="M65.9394 52.3228C53.8944 70.5832 29.9802 74.3655 16.3967 65.4055C2.81319 56.4454 7.55018 43.1435 18.375 26.733C29.1998 10.3225 48.951 8.53703 62.5345 17.4971C76.118 26.4571 76.7642 35.9123 65.9394 52.3228Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg"
-                                     clip-path="url(#territory-clip-3)">
-                              </image>
-                            </svg>
-                          </div>
-                          <div class="territory__item" data-position="0">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M55.7576 23.6373C57.6935 40.3111 48.5972 54.7272 32.5376 56.5918C16.478 58.4564 4.69878 46.6251 2.76287 29.9513C0.826948 13.2775 14.2757 4.49772 30.3353 2.63311C46.395 0.7685 53.8216 6.96353 55.7576 23.6373Z" fill="#627640"/>
-                              <g clip-path="url(#clip0_265_19237)">
-                                <path d="M18.6582 30.8021L22.443 25.5167C25.6121 21.0911 31.7688 20.0724 36.1945 23.2415V23.2415C40.6201 26.4106 41.6388 32.5674 38.4697 36.9931L34.6849 42.2785" stroke="white" stroke-width="1.6"/>
-                                <path d="M34.7088 22.1778L36.4292 19.7752C36.3502 19.7342 36.2732 19.6871 36.1988 19.6338C35.3513 19.027 35.1562 17.8481 35.7631 17.0006C36.37 16.1531 37.5489 15.958 38.3964 16.5649C39.1694 17.1185 39.7136 17.7096 39.2874 18.5294C39.9263 17.8619 40.6923 18.2089 41.4653 18.7625C42.3128 19.3693 42.5079 20.5482 41.901 21.3958C41.2941 22.2433 40.1152 22.4383 39.2677 21.8314C39.1933 21.7781 39.124 21.7204 39.0597 21.6588L37.3393 24.0614" stroke="white" stroke-width="1.6"/>
-                                <ellipse cx="26.5498" cy="36.711" rx="9.01718" ry="9.85599" transform="rotate(-54.3945 26.5498 36.711)" stroke="white" stroke-width="1.6"/>
-                                <circle cx="26.5501" cy="36.7109" r="4.2571" transform="rotate(-54.3945 26.5501 36.7109)" stroke="white" stroke-width="1.6"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_265_19237">
-                                  <rect width="32" height="32" fill="white" transform="translate(14.8862 15.1039)"/>
-                                </clipPath>
-                              </defs>
-                              <defs>
-                                <clipPath id="territory-clip-4">
-                                  <path d="M55.7576 23.6373C57.6935 40.3111 48.5972 54.7272 32.5376 56.5918C16.478 58.4564 4.69878 46.6251 2.76287 29.9513C0.826948 13.2775 14.2757 4.49772 30.3353 2.63311C46.395 0.7685 53.8216 6.96353 55.7576 23.6373Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg"
-                                     clip-path="url(#territory-clip-4)">
-                              </image>
-                            </svg>
-                          </div>
-                          <div class="territory__item" data-position="0">
-                            <svg width="74" height="73" viewBox="0 0 74 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M46.7651 11.5831C61.428 19.7539 67.813 35.5589 59.9431 49.6818C52.0733 63.8046 35.5892 66.4515 20.9263 58.2807C6.26341 50.1099 6.99571 34.0656 14.8656 19.9428C22.7354 5.81998 32.1022 3.41233 46.7651 11.5831Z" fill="#627640"/>
-                              <path d="M27.0247 26.5514L27.4867 24.8271L30.1705 25.6521C33.5255 26.6835 35.7687 29.8406 35.6388 33.3482L35.5164 36.6521L33.0246 36.1649C28.6175 35.3033 25.8625 30.8889 27.0247 26.5514Z" stroke="white" stroke-width="1.6"/>
-                              <path d="M26.5867 35.9413L26.9615 34.196L29.6833 34.8851C33.0859 35.7467 35.4849 38.7871 35.5314 42.2967L35.5752 45.6026L33.0621 45.2412C28.6173 44.6021 25.6439 40.3317 26.5867 35.9413Z" stroke="white" stroke-width="1.6"/>
-                              <path d="M45.572 35.9413L45.1972 34.196L42.4754 34.8851C39.0728 35.7467 36.6738 38.7871 36.6273 42.2967L36.5835 45.6026L39.0966 45.2412C43.5414 44.6021 46.5148 40.3317 45.572 35.9413Z" stroke="white" stroke-width="1.6"/>
-                              <path d="M44.7491 26.6113L44.2747 24.8409L41.8459 25.5839C38.3836 26.6431 36.1157 29.958 36.3832 33.5688L36.6117 36.6541L38.7878 36.2171C43.1751 35.3362 45.9073 30.9337 44.7491 26.6113Z" stroke="white" stroke-width="1.6"/>
-                              <line x1="33.5623" y1="27.7584" x2="33.5623" y2="21.2167" stroke="white" stroke-width="1.6"/>
-                              <line x1="38.344" y1="27.7584" x2="38.344" y2="21.2167" stroke="white" stroke-width="1.6"/>
-                              <path d="M35.8809 51.6167L35.8809 43.6167" stroke="white" stroke-width="1.6"/>
-                              <defs>
-                                <clipPath id="territory-clip-5">
-                                  <path d="M46.7651 11.5831C61.428 19.7539 67.813 35.5589 59.9431 49.6818C52.0733 63.8046 35.5892 66.4515 20.9263 58.2807C6.26341 50.1099 6.99571 34.0656 14.8656 19.9428C22.7354 5.81998 32.1022 3.41233 46.7651 11.5831Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg"
-                                     clip-path="url(#territory-clip-5)">
-                              </image>
-                            </svg>
-                          </div>
-                          <div class="territory__item" data-position="0">
-                            <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M58.0205 20.4291C66.6283 34.8398 64.2492 51.719 50.3693 60.0097C36.4894 68.3004 20.8925 62.345 12.2847 47.9343C3.67691 33.5236 12.3381 19.9982 26.2181 11.7074C40.098 3.41669 49.4127 6.01839 58.0205 20.4291Z" fill="#627640"/>
-                              <g clip-path="url(#clip0_265_19234)">
-                                <path d="M30.5307 43.0206C26.9857 39.4757 26.9857 33.7282 30.5307 30.1832C34.0756 26.6383 39.8232 26.6383 43.3681 30.1832C46.9131 33.7282 46.9131 39.4757 43.3681 43.0206L36.9494 49.4394L30.5307 43.0206Z" stroke="white" stroke-width="2"/>
-                                <path d="M34.2977 27.4C31.9781 27.4 30.0977 25.5196 30.0977 23.2L30.0977 22.8C30.0977 20.7013 31.799 19 33.8977 19C35.9963 19 37.6977 20.7013 37.6977 22.8L37.6977 27.4L34.2977 27.4Z" stroke="white" stroke-width="2"/>
-                                <path d="M39.4976 27.4C41.1544 27.4 42.4976 26.0569 42.4976 24.4L42.4976 23.6C42.4976 22.385 41.5126 21.4 40.2976 21.4C39.0825 21.4 38.0976 22.385 38.0976 23.6L38.0976 27.4L39.4976 27.4Z" stroke="white" stroke-width="2"/>
-                                <line x1="28.2979" y1="33.8" x2="35.4979" y2="33.8" stroke="white" stroke-width="2"/>
-                                <line x1="39.4976" y1="37" x2="46.6976" y2="37" stroke="white" stroke-width="2"/>
-                                <line x1="33.8975" y1="41" x2="39.4975" y2="41" stroke="white" stroke-width="2"/>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_265_19234">
-                                  <rect width="32" height="32" fill="white" transform="translate(21.0977 18)"/>
-                                </clipPath>
-                              </defs>
-                              <defs>
-                                <clipPath id="territory-clip-6">
-                                  <path d="M58.0205 20.4291C66.6283 34.8398 64.2492 51.719 50.3693 60.0097C36.4894 68.3004 20.8925 62.345 12.2847 47.9343C3.67691 33.5236 12.3381 19.9982 26.2181 11.7074C40.098 3.41669 49.4127 6.01839 58.0205 20.4291Z" fill="#627640"/>
-                                </clipPath>
-                              </defs>
-                              <image width="100px" height="100px" preserveAspectRatio="xMidYMid slice"
-                                     href="https://www.krassever.ru/statics/images/arcticles/032020/18032020x07c956e1.jpg"
-                                     clip-path="url(#territory-clip-6)">
-                              </image>
-                            </svg>
-                          </div>
+                            <p class="benefits__text">We have regular food deliveries available straight to your door.  Sign up for a weekly order on repeat or a once off.
+                            </p>
                         </div>
-                        <div class="territory__desc">
-                            <div class="territory__desc-item">
-                                <div class="territory__desc-title">СК1 «Смычка»</div>
-                                <div class="territory__desc-info">Республика Башкортостан, Чишминский р-он,
-                                    <span>с. Шингак-Куль</span></div>
+                        <div class="benefits__text-wrap">
+                            <svg>
+                                <use xlink:href="#tick-ico"></use>
+                            </svg>
+                            <p class="benefits__text">Deliveries are packed in an insulated box and delivered to your door by our Pet Butcher refrigerated trucks.
+                            </p>
+                        </div>
+                        <div class="benefits__text-wrap">
+                            <svg>
+                                <use xlink:href="#tick-ico"></use>
+                            </svg>
+                            <p class="benefits__text">We believe a balanced and freshly made diet will improve the health and happiness of you pet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits__img"></div>
+            </div>
+        </section>
+        <section class="response">
+            <div class="mbox">
+                <div class="response__inner">
+                    <div class="title-row">
+                        <div class="title-row__left">
+                            <svg>
+                                <use xlink:href="#wave-left"></use>
+                            </svg>
+                        </div>
+                        <h3 class="title">What people say about us</h3>
+                        <div class="title-row__right">
+                            <svg>
+                                <use xlink:href="#wave-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="response__slider-wrap">
+                        <div class="response__slider swiper-wrapper">
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Gus.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">Whitnee King</h5>
+                                <span class="response__slide-subtitle">& Gus the Golden Retriever </span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="territory__desc-item">
-                                <div class="territory__desc-title">СК2 «Мирный» </div>
-                                <div class="territory__desc-info">Республика Башкортостан, Благоварский р-он,
-                                    <span>с. Троицкое</span></div>
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Merlin.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">JOEL FRANKLIN</h5>
+                                <span class="response__slide-subtitle">& Merlin</span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="territory__desc-item">
-                                <div class="territory__desc-title">СК3 «Дмитриевка» </div>
-                                <div class="territory__desc-info">Республика Башкортостан, Благоварский р-он,
-                                    <span>д. Дмитриевка</span></div>
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Ranger.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">ADAM BOCK</h5>
+                                <span class="response__slide-subtitle">& Ranger</span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Gus.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">Whitnee King</h5>
+                                <span class="response__slide-subtitle">& Gus the Golden Retriever </span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Merlin.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">JOEL FRANKLIN</h5>
+                                <span class="response__slide-subtitle">& Merlin</span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="response__slide swiper-slide">
+                                <div class="response__slide-img">
+                                    <img src="images/TPB-Ranger.png" alt="">
+                                </div>
+                                <h5 class="response__slide-title title">ADAM BOCK</h5>
+                                <span class="response__slide-subtitle">& Ranger</span>
+                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
+                                <div class="rating">
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-active-ico"></use>
+                                    </svg>
+                                    <svg>
+                                        <use xlink:href="#rating-ico"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrows arrows--black">
+                            <div class="arrows__wrap">
+                                <div class="arrows__left arrows__disabled">
+                                    <svg>
+                                        <use xlink:href="#arrow-left"></use>
+                                    </svg>
+                                </div>
+                                <div class="arrows__right">
+                                    <svg>
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="responsibility">
-                <div class="mbox">
-                    <div class="title">Отвественность</div>
-                    <div class="responsibility__block">
-                        <a href="#" class="responsibility__unit">
-                            <div class="responsibility__unit-img">
-                                <img src="../images/responsibility/resp_1.png" alt="">
-                            </div>
-                            <div class="responsibility__unit-title">Забота об экологии</div>
-                            <div class="responsibility__unit-descr">Ответственное отношение к использованию природных ресурсов — важный фактор устойчивости развития Компаниии</div>
-                        </a>
-                        <a href="#" class="responsibility__unit">
-                            <div class="responsibility__unit-img">
-                                <img src="../images/responsibility/resp_2.png" alt="">
-                            </div>
-                            <div class="responsibility__unit-title">Социальная политика</div>
-                            <div class="responsibility__unit-descr">Компания стремится выстраивать отношения с работниками на основе принципов взаимного уважения, доверия и взаимной ответственности</div>
-                        </a>
-                        <a href="#" class="responsibility__unit">
-                            <div class="responsibility__unit-img">
-                                <img src="../images/responsibility/resp_3.png" alt="">
-                            </div>
-                            <div class="responsibility__unit-title">Забота о сотрудниках</div>
-                            <div class="responsibility__unit-descr">В «Таврос» построена комплексная работа, направленная на повышение квалификации и профессиональное развитие сотрудников</div>
-                        </a>
-                        <a href="#" class="responsibility__unit">
-                            <div class="responsibility__unit-img">
-                                <img src="../images/responsibility/resp_4.png" alt="">
-                            </div>
-                            <div class="responsibility__unit-title">Благотворительность</div>
-                            <div class="responsibility__unit-descr">Компания стремится выстраивать отношения с работниками на основе принципов взаимного уважения, доверия и взаимной ответственности</div>
-                        </a>
+            </div>
+        </section>
+        <section class="special-occasion">
+            <div class="mbox">
+                <div class="special-occasion__block">
+                    <div class="special-occasion__info">
+                        <div class="special-occasion__title">
+                            <svg class="special-occasion__left">
+                                <use xlink:href="#occasion-left"></use>
+                            </svg>
+                            <h3 class="title">Special Occasion HAMPERS</h3>
+                            <svg class="special-occasion__right">
+                                <use xlink:href="#occasion-right"></use>
+                            </svg>
+                        </div>
+                        <p class="special-occasion__text text">Birthdays, Christmas, Easter or even Get Well Soon.  We have beautiful Hound Hampers for your pet.  Come in store and see our range or select online for delivery.  We have pre packed hampers or can make one up with your own selection of treats and accessories.</p>
+                        <a href="#" class="btn"><span>VIEW RANGE</span></a>
+                    </div>
+                    <div class="special-occasion__img">
+                        <img src="images/TPB-Birthdays.png" alt="">
                     </div>
                 </div>
-            </section>
-        </div>
-    </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="footer__top">
-            <div class="footer__nav" data-accord>
-                <div class="footer__unit-wrap">
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>Агрохолдинг</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">История и современность</a>
-                            <a href="#">Руководство</a>
-                            <a href="#">География присутствия</a>
-                            <a href="#">Инновации и технологии</a>
-                            <a href="#">Новые проекты</a>
-                            <a href="#">Награды и достижения</a>
-                            <a href="#">Раскрытие информации</a>
-                            <a href="#">Ответственность</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__unit-wrap">
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>Деятельность</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">Растениеводство</a>
-                            <a href="#">Животноводство</a>
-                            <a href="#">Производство сахара</a>
-                            <a href="#">Мясопереработка</a>
-                            <a href="#">Производство комбикормов</a>
-                            <a href="#">Кондитерская фабрика</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__unit-wrap">
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>продукция</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">Сельскохозяйственные
-                                культуры</a>
-                            <a href="#">Племенные свиньи</a>
-                            <a href="#">Продукция из переработки
-                                мяса</a>
-                            <a href="#">Сахар, жом</a>
-                            <a href="#">Комбикорм и ингридиенты</a>
-                            <a href="#">Кондитерские изделия</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__unit-wrap">
-                    <div class="footer__unit">
-                        <div class="footer__top-title">Закупки</div>
-                    </div>
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>инвесторам</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">Отчетность</a>
-                            <a href="#">Презентации</a>
-                        </div>
-                    </div>
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>карьера</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">Для профессионалов</a>
-                            <a href="#">Для молодых специалистов</a>
-                            <a href="#">Для студентов</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__unit-wrap">
-                    <div class="footer__unit">
-                        <div class="footer__top-title" data-accord-btn>Контакты</div>
-                        <div class="footer__top-links" data-accord-content>
-                            <a href="#">Общие</a>
-                            <a href="#">Контакты предприятий</a>
-                        </div>
-                    </div>
-                    <div class="footer__unit">
-                        <a href="#" class="footer__unit-link">+7 (495) 510-63-83</a>
-                        <a href="#" class="footer__unit-link">info@avgagro.ru</a>
-                    </div>
-                    <div class="footer__unit">
-                        <a href="#" class="footer__unit-btn green-btn">Обратная связь</a>
-                    </div>
+            <div class="mbox">
+                <a href="#" class="footer__logo">
+                    <svg>
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__nav">
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Shop</a>
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Wholesale</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Delivery & Shipping</a>
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="footer__bottom-unit">
-                <span class="footer__bottom-copyright">© 2011—2021 Таврос. Все права защищены</span>
+            <div class="mbox">
+                <div class="footer__social">
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#fb-ico"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#insta-ico"></use>
+                        </svg>
+                    </a>
+                </div>
+                <span class="footer__copyright">© 2022 The Pet Butcher</span>
             </div>
-            <div class="footer__bottom-unit">
-                <a href="#" class="footer__bottom-link">
-                    <svg>
-                        <use xlink:href="#fb-ico"></use>
-                    </svg>
-                </a>
-                <a href="#" class="footer__bottom-link">
-                    <svg>
-                        <use xlink:href="#vk-ico"></use>
-                    </svg>
-                </a>
-                <a href="#" class="footer__bottom-link">
-                    <svg>
-                        <use xlink:href="#ok-ico"></use>
-                    </svg>
-                </a>
-                <a href="#" class="footer__bottom-link">
-                    <svg>
-                        <use xlink:href="#insta-ico"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="footer__bottom-unit">
-                <a href="#" class="footer__bottom-logo">
-                    <svg>
-                        <use xlink:href="#footer-bottom-logo"></use>
-                    </svg>
-                </a>
-            </div>
-    
         </div>
     </footer>
-    <div class="construction">
-        <div class="construction__unit">
-            <a href="#" class="construction__logo">
-                <svg>
-                    <use xlink:href="#header-logo"></use>
-                </svg>
-            </a>
-            <div class="title">Сайт находится <br> в разработке</div>
-            <div class="construction__text">Пожалуйста, зайдите в ПК, чтобы увидеть основную информацию</div>
-        </div>
-        <div class="construction__img">
-            <img src="./images/constr-page.png" alt="">
-        </div>
-    </div>
     <script>
-        var revision = 4624234;
-        var file = 'images/sprite.svg';
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+    
+        let revision = dateTime;
+        let file = 'images/sprite.svg';
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/base.js"></script>
     <script src="js/dev.js"></script>
