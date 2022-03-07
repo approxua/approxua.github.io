@@ -107,7 +107,160 @@
                 </div>
             </div>
         </section>
-        <section class="contact__map"></section>
+        <section class="contact__map-wrap">
+            <div id="map" class="contact__map"></div>
+            <div class="contact__balloon">
+                <div class="contact__balloon-title">The Pet Butcher</div>
+                <div class="contact__balloon-text text">
+                    <p>95 Bower Road</p>
+                    <p>Ethelton SA</p>
+                </div>
+                <div class="contact__balloon-text text">
+                    <p>Mon - Fri: 7am - 5:30pm</p>
+                    <p>Sat: 7am - 1pm</p>
+                    <p>Sun and public holidays: closed</p>
+                </div>
+            </div>
+        </section>
+
+        <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm_lxrzU5YNG1ElK6QCRtSUTg8rJPv0Wk&callback=initMap&v=weekly"
+                async
+        ></script>
+        <script>
+            function initMap() {
+                const styledMapType = new google.maps.StyledMapType(
+                    [
+                        { elementType: "geometry", stylers: [{ color: "#F2ECE4" }] },
+                        { elementType: "labels.text.fill", stylers: [{ color: "#727272" }] },
+                        { elementType: "labels.text.stroke", stylers: [{ color: "#ffffff" }] },
+                        {
+                            featureType: "landscape.natural",
+                            elementType: "geometry",
+                            stylers: [{ color: "#F2ECE4" }],
+                        },
+                        {
+                            featureType: "poi",
+                            elementType: "geometry",
+                            stylers: [{ color: "#F6F6F6" }],
+                        },
+                        {
+                            featureType: "poi",
+                            elementType: "labels.text.fill",
+                            stylers: [{ color: "#727272" }],
+                        },
+                        {
+                            featureType: "poi.park",
+                            elementType: "geometry.fill",
+                            stylers: [{ color: "#F6F6F6" }],
+                        },
+                        {
+                            featureType: "poi.park",
+                            elementType: "labels.text.fill",
+                            stylers: [{ color: "#727272" }],
+                        },
+                        {
+                            featureType: "poi.business",
+                            stylers: [{ visibility: "off" }]
+                        },
+                        {
+                            featureType: "road",
+                            elementType: "geometry",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.arterial",
+                            elementType: "geometry",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.highway",
+                            elementType: "geometry",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.highway",
+                            elementType: "geometry.stroke",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.highway.controlled_access",
+                            elementType: "geometry",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.highway.controlled_access",
+                            elementType: "geometry.stroke",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "road.local",
+                            elementType: "labels.text.fill",
+                            stylers: [{ color: "#727272" }],
+                        },
+                        {
+                            featureType: "transit.line",
+                            elementType: "geometry",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "transit.line",
+                            elementType: "labels.text.fill",
+                            stylers: [{ color: "#727272" }],
+                        },
+                        {
+                            featureType: "transit.line",
+                            elementType: "labels.text.stroke",
+                            stylers: [{ color: "#ffffff" }],
+                        },
+                        {
+                            featureType: "transit.station",
+                            elementType: "geometry",
+                            stylers: [{ color: "#dfd2ae" }],
+                        },
+                        {
+                            featureType: "water",
+                            elementType: "geometry.fill",
+                            stylers: [{ color: "#E7D0AF" }],
+                        },
+                        {
+                            featureType: "water",
+                            elementType: "labels.text.fill",
+                            stylers: [{ color: "#727272" }],
+                        }
+                    ],
+                    { name: "Styled Map" }
+                );
+
+                const markerPos = { lat: -34.8508579, lng: 138.4858130 };
+
+                const mobilePos = { lat: -34.8500579, lng: 138.4858130 };
+
+                let centerPos = { lat: -34.8501293, lng: 138.4915538 }
+
+                if (window.innerWidth < 768) {
+                    centerPos = mobilePos;
+                }
+
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    center: centerPos,
+                    zoom: 16,
+                    disableDefaultUI: true,
+                    mapTypeControlOptions: {
+                        mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
+                    },
+                });
+
+                new google.maps.Marker({
+                    position: markerPos,
+                    map,
+                    icon: 'images/map-marker.png'
+                });
+
+                map.mapTypes.set("styled_map", styledMapType);
+                map.setMapTypeId("styled_map");
+            }
+        </script>
     </main>
     <footer class="footer">
         <div class="footer__top">
