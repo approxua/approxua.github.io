@@ -63,16 +63,19 @@ function showMore() {
 }
 
 function showMobmenu() {
+    let header = $('.header')
     let burger = $('.header__burger');
     let nav = $('.header__nav');
     let shadow = $('.shadow');
     burger.on('click', function () {
-        nav.addClass('header__nav--opened');
-        shadow.addClass('shadow--opened');
-        $body.addClass('body--fixed');
+        header.toggleClass('header--opened');
+        nav.toggleClass('header__nav--opened');
+        shadow.toggleClass('shadow--opened');
+        $body.toggleClass('body--fixed');
     })
 
     shadow.on('click', function () {
+        header.removeClass('header--opened');
         nav.removeClass('header__nav--opened');
         shadow.removeClass('shadow--opened');
         $body.removeClass('body--fixed');
