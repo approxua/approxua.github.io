@@ -79,8 +79,104 @@ function showMobmenu() {
     })
 }
 
+function openSelect() {
+    let select = $('.shop__filter');
+    let selectPlacehoder;
+
+    select.on('click', function (e) {
+        $(this).toggleClass('shop__filter--opened');
+
+        if(e.target.classList.contains('shop__filter-item')) {
+            e.preventDefault();
+            selectPlacehoder = e.target.textContent;
+            $(this).find('.shop__filter-item').removeClass('shop__filter-item--selected');
+            $(this).find('.shop__filter-placeholder span').text(selectPlacehoder);
+            e.target.classList.add('shop__filter-item--selected')
+        }
+    })
+}
+
+function missClick(){
+    var div = $('.shop__filter');
+    var button = $('.shop__filter-item');
+    $(document).on('click', function (event) {
+        if(div.hasClass('shop__filter--opened') && !div.is(event.target) && div.has(event.target).length === 0 && !button.is(event.target) && button.has(event.target).length === 0) {
+            div.removeClass('shop__filter--opened');
+        }
+    })
+}
+
+
+let input = $('.card__count-number');
+let curCount = input.val();
+
+function calcCount(input) {
+    let pricePerOne = Number($('[data-price]').attr('data-price'));
+    let curPrice = parseInt(input.val()) * pricePerOne;
+
+    $('.card__sum-total').text(curPrice.toFixed(2));
+    curCount = input.val();
+}
+
+function cardCount() {
+
+    let plus = $('.card__count-item--plus');
+    let minus = $('.card__count-item--minus');
+
+    input.on('input', function () {
+
+        $(this).val($(this).val().replace(/[^\d]/g, ""));
+        if(!$(this).val()) {
+            $(this).val(1);
+        }
+
+        calcCount(input);
+    })
+
+    minus.on('click', function () {
+        console.log(curCount);
+        if(!(Number(curCount) === 1)) {
+            input.val(--curCount)
+            calcCount(input);
+        }
+
+    })
+
+    plus.on('click', function () {
+        input.val(++curCount)
+        calcCount(input);
+    })
+}
+
+function readMoreText() {
+    $('.js-read-more-btn').on('click', function () {
+        let fullText = $(this).parents('.js-read-more').find('.js-read-more-text').attr('data-text');
+        $(this).parents('.js-read-more').find('.js-read-more-text').text(fullText);
+        $(this).remove();
+    })
+}
+
+function accordionInit() {
+    $('.accordion__head').on('click', function () {
+        if($(this).hasClass('accordion__head--active')) {
+            $(this).removeClass('accordion__head--active');
+            $(this).siblings('.accordion__content').slideUp();
+        } else {
+            $(this).parents('.accordion').find('.accordion__head').removeClass('accordion__head--active');
+            $(this).parents('.accordion').find('.accordion__content').slideUp();
+            $(this).addClass('accordion__head--active');
+            $(this).siblings('.accordion__content').slideDown();
+        }
+    })
+}
+
 $(document).ready(function () {
     showMore();
     animationHeader();
     showMobmenu();
+    openSelect();
+    missClick();
+    cardCount();
+    readMoreText();
+    accordionInit();
 })

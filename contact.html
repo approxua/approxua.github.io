@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>the PET BUTCHER</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicons/manifest.webapp">
+    <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="global-wrapper">
+    <header class="header">
+        <div class="header__row">
+            <div class="mbox">
+                <div class="header__logo-wrap">
+                    <a href="/" class="header__logo">
+                        <svg>
+                            <use xlink:href="#logo-ico"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="header__nav">
+                <div class="header__links">
+                    <a href="#" class="header__links-item">Shop</a>
+                    <a href="#" class="header__links-item">About</a>
+                    <a href="#" class="header__links-item">Wholesale</a>
+                    <a href="#" class="header__links-item">Contact</a>
+                </div>
+                <a href="#" class="header__search">
+                    <svg>
+                        <use xlink:href="#search-ico"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__basket">
+                    <svg>
+                        <use xlink:href="#basket-ico"></use>
+                    </svg>
+                    <span class="header__basket-circle">2</span>
+                </a>
+    
+            </div>
+        </div>
+    </header>
+    <div class="shadow"></div>
+    <div class="row"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <main class="main page-contact">
+        <section class="contact curtain curtain--sm-short">
+            <div class="mbox">
+                <div class="contact__wrap">
+                    <div class="contact__desc">
+                        <h1 class="title big-title">Contact</h1>
+                        <div class="contact__links">
+                            <a href="#" class="contact__link text">
+                                <svg>
+                                    <use xlink:href="#mail-ico"></use>
+                                </svg>
+                                <span class="text">Email:</span>
+                                hello@petbutcher.com.au
+                            </a>
+                            <a href="#" class="contact__link text">
+                                <svg>
+                                    <use xlink:href="#phone-ico"></use>
+                                </svg>
+                                <span class="text">Phone:</span>
+                                08 7286 9060
+                            </a>
+                        </div>
+                        <p class="contact__text text">We want your feedback -   Providing the best service and food to you and for your pets is the most important thing we do so if you would like to contact us about anything, what you want to see in store, service, quality or on your overall experience – please contact us via phone on 08 72869060 or email hello@petbutcher.com.au or speak to us directly in store.</p>
+                        <p class="contact__text text">We aim to keep all our customers (human and pet) happy and healthy.</p>
+                    </div>
+                    <div class="contact__form">
+                        <form action="#" class="contact-form">
+                            <div class="contact-form__inner">
+                                <div class="contact-form__input">
+                                    <input type="text" placeholder="First name" class="text">
+                                </div>
+                                <div class="contact-form__input">
+                                    <input type="text" placeholder="Last name" class="text">
+                                </div>
+                                <div class="contact-form__input">
+                                    <input type="tel" placeholder="Contact number" class="text">
+                                </div>
+                                <div class="contact-form__input">
+                                    <input type="email" placeholder="Email address" class="text">
+                                </div>
+                                <div class="contact-form__input">
+                                    <textarea name="comment" id="#" placeholder="Message" class="text"></textarea>
+                                </div>
+                            </div>
+                            <div class="form__btn">
+                                <button type="button" class="btn"><span>SUBMIT</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact__map"></section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="mbox">
+                <a href="#" class="footer__logo">
+                    <svg>
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__nav">
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Shop</a>
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Wholesale</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Delivery & Shipping</a>
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="mbox">
+                <div class="footer__social">
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#fb-ico"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#insta-ico"></use>
+                        </svg>
+                    </a>
+                </div>
+                <span class="footer__copyright">© 2022 The Pet Butcher</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+    
+        let revision = dateTime;
+        let file = 'images/sprite.svg';
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/dev.js"></script>
+</div>
+</body>
+</html>

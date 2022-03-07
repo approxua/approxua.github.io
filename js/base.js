@@ -199,7 +199,7 @@ function popNext(popupId) {
 /*маска на инпуте*/
 function Maskedinput() {
     if ($('.tel-mask')) {
-        $('.tel-mask').mask('+7 (999) 999 -  99 - 99 ');
+        $('.tel-mask').mask('+61 (999) 999 -  99 - 99 ');
     }
 }
 
