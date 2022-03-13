@@ -1,30 +1,13 @@
 let $body = $('body');
+let $window = $(window);
 
-const productSwiper = new Swiper('.products', {
-    loop: true,
-    centeredSlides: true,
+const brandsSwiper = new Swiper('.brands', {
     slidesPerView: 'auto',
-    navigation: {
-        nextEl: '.products .arrows__right',
-        prevEl: '.products .arrows__left',
-    },
-});
-
-const responseSwiper = new Swiper('.response__slider-wrap', {
-    slidesPerView: 'auto',
-    loop: true,
-    spaceBetween: 16,
-    centeredSlides: true,
-    navigation: {
-        nextEl: '.response .arrows__right',
-        prevEl: '.response .arrows__left',
-    },
-    breakpoints: {
-        1280: {
-            slidesPerView: 3,
-            loop: false,
-            centeredSlides: false
-        }
+    loop: false,
+    freeMode: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     }
 });
 
@@ -41,7 +24,7 @@ function animationHeader() {
 
     if (getBodyClass()) return false
 
-    $(window).on('scroll', function () {
+    $window.on('scroll', function () {
         let $nextScroll = $(this).scrollTop();
 
         if ($nextScroll >= headerHeight && $nextScroll > $currentScroll) {
@@ -54,132 +37,147 @@ function animationHeader() {
     })
 }
 
-function showMore() {
-    $('.premium__show-more').on('click', function () {
-        $('.premium__text').toggleClass('is-active');
-        let text = ($(this).html() === 'Learn more') ? 'Learn less' : 'Learn more';
-        $(this).html(text);
-    })
-}
+function animateScroll() {
+    let timer = null;
+    let oldDistance = $window.scrollTop();
 
-function showMobmenu() {
-    let header = $('.header')
-    let burger = $('.header__burger');
-    let nav = $('.header__nav');
-    let shadow = $('.shadow');
-    burger.on('click', function () {
-        header.toggleClass('header--opened');
-        nav.toggleClass('header__nav--opened');
-        shadow.toggleClass('shadow--opened');
-        $body.toggleClass('body--fixed');
-    })
+    $window.on('scroll', function () {
+        let footer = $('.footer')
+        if ((footer.offset().top) >= ($window.scrollTop() + $window.innerHeight())) {
+            clearTimeout(timer);
 
-    shadow.on('click', function () {
-        header.removeClass('header--opened');
-        nav.removeClass('header__nav--opened');
-        shadow.removeClass('shadow--opened');
-        $body.removeClass('body--fixed');
-    })
-}
+            let newDistance = $window.scrollTop();
+            let distance = oldDistance < newDistance ? newDistance + 50 : newDistance - 50;
 
-function openSelect() {
-    let select = $('.shop__filter');
-    let selectPlacehoder;
+            $('.decor').css({'top': `${distance}px`});
 
-    select.on('click', function (e) {
-        $(this).toggleClass('shop__filter--opened');
+            timer = setTimeout(function () {
+                let difference = newDistance - oldDistance;
+                let formattedDifference = difference < 0 ? difference * -1 : difference * 1;
 
-        if(e.target.classList.contains('shop__filter-item')) {
-            e.preventDefault();
-            selectPlacehoder = e.target.textContent;
-            $(this).find('.shop__filter-item').removeClass('shop__filter-item--selected');
-            $(this).find('.shop__filter-placeholder span').text(selectPlacehoder);
-            e.target.classList.add('shop__filter-item--selected')
+                if (formattedDifference > 200) {
+                    oldDistance = newDistance;
+                    $('.decor').css({'top': `${oldDistance}px`})
+                }
+            }, 400);
         }
-    })
+    });
 }
 
-function missClick(){
-    var div = $('.shop__filter');
-    var button = $('.shop__filter-item');
-    $(document).on('click', function (event) {
-        if(div.hasClass('shop__filter--opened') && !div.is(event.target) && div.has(event.target).length === 0 && !button.is(event.target) && button.has(event.target).length === 0) {
-            div.removeClass('shop__filter--opened');
-        }
-    })
-}
+let activeIndex = 0;
 
+function nextPresentationSlide(section, index) {
+    if(index !== activeIndex) {
+        activeIndex = index;
 
-let input = $('.card__count-number');
-let curCount = input.val();
+        let imgClass = '.parallax__img';
+        let imgActiveClass = 'parallax__img--active';
+        let imgPrevClass = 'parallax__img--prev';
+        let imgNextClass = 'parallax__img--next';
 
-function calcCount(input) {
-    let pricePerOne = Number($('[data-price]').attr('data-price'));
-    let curPrice = parseInt(input.val()) * pricePerOne;
+        let textClass = '.parallax__text';
+        let textActiveClass = 'parallax__text--active';
+        let textPrevClass = 'parallax__text--prev';
+        let textNextClass = 'parallax__text--next';
 
-    $('.card__sum-total').text(curPrice.toFixed(2));
-    curCount = input.val();
-}
+        let prevSlide = index - 1;
+        let nextSlide = index + 1;
 
-function cardCount() {
-
-    let plus = $('.card__count-item--plus');
-    let minus = $('.card__count-item--minus');
-
-    input.on('input', function () {
-
-        $(this).val($(this).val().replace(/[^\d]/g, ""));
-        if(!$(this).val()) {
-            $(this).val(1);
+        if (prevSlide < 0) {
+            prevSlide = null;
         }
 
-        calcCount(input);
-    })
-
-    minus.on('click', function () {
-        console.log(curCount);
-        if(!(Number(curCount) === 1)) {
-            input.val(--curCount)
-            calcCount(input);
+        if (nextSlide < 0) {
+            nextSlide = null;
         }
 
-    })
+        section.find(imgClass).removeClass(`${imgActiveClass} ${imgPrevClass} ${imgNextClass}`);
+        section.find(`.parallax__img:eq(${prevSlide})`).addClass(imgPrevClass);
+        section.find(`.parallax__img:eq(${index})`).addClass(imgActiveClass);
+        section.find(`.parallax__img:eq(${nextSlide})`).addClass(imgNextClass);
 
-    plus.on('click', function () {
-        input.val(++curCount)
-        calcCount(input);
-    })
+        section.find(textClass).removeClass(textActiveClass);
+        $(`.parallax__text:eq(${index})`).addClass(textActiveClass);
+    }
 }
 
-function readMoreText() {
-    $('.js-read-more-btn').on('click', function () {
-        let fullText = $(this).parents('.js-read-more').find('.js-read-more-text').attr('data-text');
-        $(this).parents('.js-read-more').find('.js-read-more-text').text(fullText);
-        $(this).remove();
-    })
-}
+function parallaxSlider(el) {
+    let header = $('.header');
+    let section = $(`.${el}`);
+    let wrap = section.find('.parallax__wrap');
+    let img = section.find('.parallax__img')
+    let activeImg = section.find('.parallax__img--active');
+    let height = img.innerHeight() * img.length;
+    let index = 0;
+    let distance = img.innerHeight() / 2;
+    let prevSlide = 0;
 
-function accordionInit() {
-    $('.accordion__head').on('click', function () {
-        if($(this).hasClass('accordion__head--active')) {
-            $(this).removeClass('accordion__head--active');
-            $(this).siblings('.accordion__content').slideUp();
-        } else {
-            $(this).parents('.accordion').find('.accordion__head').removeClass('accordion__head--active');
-            $(this).parents('.accordion').find('.accordion__content').slideUp();
-            $(this).addClass('accordion__head--active');
-            $(this).siblings('.accordion__content').slideDown();
+    wrap.css({'height': height});
+    activeImg.next().addClass('parallax__img--next');
+
+    let scrollTop = $window.scrollTop();
+    let sectionOffset = section.offset().top;
+    let scroll = scrollTop - section.offset().top;
+
+    if ((scrollTop > sectionOffset) && (scrollTop + $window.innerHeight() < sectionOffset + height)) {
+
+        if (scroll > distance) {
+            prevSlide = distance;
+            distance = distance + img.innerHeight();
+            index++
+        } else if (scroll < prevSlide) {
+            distance = distance - img.innerHeight();
+            prevSlide = distance;
+            index--;
+        }
+
+        nextPresentationSlide(section, index);
+    }
+
+    $window.on('scroll', function () {
+        scrollTop = $window.scrollTop();
+        sectionOffset = section.offset().top;
+        let parallaxFlag = false;
+
+        $('.parallax').each(function (i) {
+            if ((scrollTop > $(this).offset().top) && (scrollTop + $window.innerHeight() < $(this).offset().top + $(this).innerHeight())) {
+                parallaxFlag = true;
+
+                if (parallaxFlag) {
+                    header.addClass('header--parallax');
+                }
+            }
+        })
+
+        if (!parallaxFlag) {
+            header.removeClass('header--parallax');
+        }
+
+        if ((scrollTop > sectionOffset) && (scrollTop + $window.innerHeight() < sectionOffset + height)) {
+
+            scroll = scrollTop - section.offset().top;
+
+            if (scroll > distance) {
+                prevSlide = distance;
+                distance = distance + img.innerHeight();
+                index++
+            } else if (scroll < prevSlide) {
+                distance = distance - img.innerHeight();
+                prevSlide = distance;
+                index--;
+            }
+
+            nextPresentationSlide(section, index);
         }
     })
+
+
 }
+
 
 $(document).ready(function () {
-    showMore();
     animationHeader();
-    showMobmenu();
-    openSelect();
-    missClick();
-    cardCount();
-    readMoreText();
-    accordionInit();
+    animateScroll();
+    parallaxSlider('presentation');
+    parallaxSlider('gallery');
 })

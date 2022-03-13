@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>the PET BUTCHER</title>
+    <title>Muse Frame</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,125 +16,232 @@
 <body>
 <div class="global-wrapper">
     <header class="header">
-        <div class="header__row">
-            <div class="mbox">
-                <div class="header__logo-wrap">
-                    <a href="/" class="header__logo">
-                        <svg>
-                            <use xlink:href="#logo-ico"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="header__burger">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            <div class="header__nav">
-                <div class="header__links">
-                    <a href="#" class="header__links-item">Shop</a>
-                    <a href="#" class="header__links-item">About</a>
-                    <a href="#" class="header__links-item">Wholesale</a>
-                    <a href="#" class="header__links-item">Contact</a>
-                </div>
-                <a href="#" class="header__search">
-                    <svg>
-                        <use xlink:href="#search-ico"></use>
-                    </svg>
+        <div class="mbox">
+            <div class="header__wrap">
+                <a href="#" class="header__logo">
+                    <img src="images/header-logo.svg" alt="">
                 </a>
-                <a href="#" class="header__basket">
-                    <svg>
-                        <use xlink:href="#basket-ico"></use>
-                    </svg>
-                    <span class="header__basket-circle">2</span>
-                </a>
-    
+                <div class="header__nav">
+                    <a href="#" class="header__nav-unit">Art</a>
+                    <a href="#" class="header__nav-unit">About</a>
+                    <a href="#" class="header__nav-unit">Contact</a>
+                </div>
+                <div class="header__aside">
+                    <div class="header__btns">
+                        <a href="#" class="btn btn--transparent">Cart (<span>0</span>)</a>
+                        <a href="#" class="btn btn--black">Buy now</a>
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#fb-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#inst-ico"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <div class="shadow"></div>
-    <div class="row"></div>
-    <div class="col"></div>
-    <div class="col"></div>
     <main class="main">
-        <section class="main-banner"
-                 style="background-image: url('images/TPB-Landing-Dog.png'), url('images/TPB-Landing-Background.jpg');">
+        <div class="decor">
+          <div class="decor__item decor__item--left"></div>
+          <div class="decor__item decor__item--right"></div>
+        </div>
+        <section class="hero">
+          <div class="mbox">
+            <h1 class="main-title hero__title">Collect. Verify. Showcase.</h1>
+            <div class="hero__subtitle">The digital frame for NFT collectors that care about authenticated
+              digital art</div>
+            <div class="hero__link">
+              <a href="https://www.youtube.com/watch?v=CmwRQqJsegw" class="play" data-fancybox>See how it works</a>
+            </div>
+            <div class="hero__video">
+              <video muted autoplay loop>
+                <source src="video/preview.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </section>
+        <section class="feature">
             <div class="mbox">
-                <div class="main-banner__text">
-                    <div class="main-banner__subtitle">KING OF PET FOOD</div>
-                    <h2 class="main-banner__title">BEST LOCAL PET FOOD IN AUSTRALIA</h2>
-                    <div class="main-banner__desc">Tasty, premium, healthy pet food delivered to your door or shop in store.</div>
-                    <a href="#" class="btn"><span>SHOP NOW</span></a>
-                </div>
-                <div class="main-banner__cards">
-                    <div class="main-banner__cards-item">
-                        <div class="main-banner__cards-img">
-                            <svg width="91" height="91">
-                                <use xlink:href="#fresh-ico"></use>
-                            </svg>
+                <div class="feature__wrap">
+                    <div class="feature__subtitle">First Class Dynamic Display</div>
+                    <h2 class="feature__title">Personalise your space with Muse, an unforgettable experience for NFT collectors.</h2>
+                    <div class="feature__block">
+                        <div class="feature__unit">
+                            <div class="feature__unit-img">
+                                <img src="images/feature_1.png" alt="">
+                            </div>
+                            <h5 class="feature__unit-title unit-title">Vivid Colours</h5>
+                            <p class="feature__unit-text text">Muse Frame is an anti-glare, 4k digital frame supporting over 1 billion colours with the highest-level colour and contrast accuracy.</p>
                         </div>
-                        <h5 class="main-banner__cards-title">FRESH</h5>
-                        <p class="main-banner__cards-text text">All food at The Pet Butcher is prepared in small batches on a regular basis to ensure freshness and quality.  </p>
-                    </div>
-                    <div class="main-banner__cards-item">
-                        <div class="main-banner__cards-img">
-                            <svg width="57" height="55">
-                                <use xlink:href="#no-preserv-ico"></use>
-                            </svg>
+                        <div class="feature__unit">
+                            <div class="feature__unit-img">
+                                <img src="images/feature_2.png" alt="">
+                            </div>
+                            <h5 class="feature__unit-title unit-title">Crystal Clarity</h5>
+                            <p class="feature__unit-text text">Expressively display your NFT in any light setting with Muse Frame’s advanced anti-glare screen technology.</p>
                         </div>
-                        <h5 class="main-banner__cards-title">NO PRESERVATIVES</h5>
-                        <p class="main-banner__cards-text text">We don’t believe in adding preservatives or other nasties to help it keep longer. We would rather prepare more regularly so your pet can eat fresh and tasty food every day. </p>
-                    </div>
-                    <div class="main-banner__cards-item">
-                        <div class="main-banner__cards-img">
-                            <svg width="64" height="42">
-                                <use xlink:href="#ingrid-ico"></use>
-                            </svg>
+                        <div class="feature__unit">
+                            <div class="feature__unit-img">
+                                <img src="images/feature_3.png" alt="">
+                            </div>
+                            <h5 class="feature__unit-title unit-title">Effortless Customisation </h5>
+                            <p class="feature__unit-text text">A 180-degree viewing angle guarantees the ultimate viewing experience for your digital art.</p>
                         </div>
-                        <h5 class="main-banner__cards-title">LOCAL INGREDIENTS</h5>
-                        <p class="main-banner__cards-text text">We use 100% local Australian ingredients and source our vegetables and fruits according to what’s in season like nature intended.</p>
-                    </div>
-                    <div class="main-banner__cards-item">
-                        <div class="main-banner__cards-img">
-                            <svg width="52" height="51">
-                                <use xlink:href="#waste-ico"></use>
-                            </svg>
-                        </div>
-                        <h5 class="main-banner__cards-title">MINIMAL WASTE</h5>
-                        <p class="main-banner__cards-text text">We want to do good by your pet whilst being kind to the environment around us. All out packaging is recyclable and not as harmful to our planet.</p>
                     </div>
                 </div>
             </div>
-
         </section>
-        <section class="premium">
+        <section class="presentation parallax">
+            <div class="presentation__row">
+                <div class="presentation__gallery">
+                    <div class="presentation__wrap parallax__wrap">
+                        <div class="presentation__inner parallax__inner">
+                            <div class="presentation__img parallax__img parallax__img--active">
+                                <img src="images/How-It-Works-Step-01.png" alt="">
+                            </div>
+                            <div class="presentation__img parallax__img">
+                                <img src="images/How-It-Works-Step-02.png" alt="">
+                            </div>
+                            <div class="presentation__img parallax__img">
+                                <img src="images/How-It-Works-Step-03.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="presentation__aside">
+                    <div class="presentation__wrap parallax__wrap">
+                        <div class="presentation__inner parallax__inner">
+                            <div class="presentation__aside-wrap">
+                                <h3 class="title presentation__title">How it works</h3>
+                                <div class="presentation__steps">
+                                    <div class="presentation__step parallax__text parallax__text--active">
+                                        <p class="presentation__step-number unit-title">01</p>
+                                        <h5 class="presentation__step-title unit-title">Sign into your wallet</h5>
+                                        <p class="presentation__step-text text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                    </div>
+                                    <div class="presentation__step parallax__text">
+                                        <p class="presentation__step-number unit-title">02</p>
+                                        <h5 class="presentation__step-title unit-title">Connect to Wifi</h5>
+                                        <p class="presentation__step-text text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                    </div>
+                                    <div class="presentation__step parallax__text">
+                                        <p class="presentation__step-number unit-title">03</p>
+                                        <h5 class="presentation__step-title unit-title">Showcase your NFTs</h5>
+                                        <p class="presentation__step-text text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery parallax">
+            <div class="parallax__wrap">
+                <div class="parallax__inner">
+                    <div class="gallery__block parallax__img parallax__img--active" style="background-image: url('images/gallery-bg.jpg')">
+                        <div class="mbox">
+                            <div class="gallery__wrap">
+                                <h3 class="title">A Futuristic Art Experience</h3>
+                                <p class="gallery__text text">The ultra-thin 1’ panel and lightweight frame create an aesthetic
+                                    piece to match any interior. You have the choice of three different sizes, all with immense 4K
+                                    clarity.</p>
+                                <a href="#" class="link">Buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__block parallax__img" style="background-image: url('images/app-bg.jpg')">
+                        <div class="mbox">
+                            <div class="gallery__wrap">
+                                <h3 class="title">Seamless App Integration </h3>
+                                <p class="gallery__text text">Once connected to a Metamask or Trustwallet, the intelligent Muse App
+                                    can instantly display your collection, while keeping the token locked securely in your
+                                    wallet.</p>
+                                <div class="gallery__item-wrap">
+                                    <p class="gallery__item text">QR Code Scan Ownership Verification</p>
+                                    <p class="gallery__item text">Secure storage network only imports art asset, while the token
+                                        stays locked in your wallet.</p>
+                                    <p class="gallery__item text">Adjustable LED Brightness</p>
+                                    <p class="gallery__item text">Customisable Artwork Size, no matter the aspect ratio</p>
+                                    <p class="gallery__item text">Scheduled Artwork Curation Feature</p>
+                                </div>
+                                <a href="#" class="link">Buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="brands">
+            <div class="brands__wrap swiper-wrapper">
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Nifty-Gateway.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Foundation.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Makers-Place.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/OpenSea.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Super-Rare.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Nifty-Gateway.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Foundation.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Makers-Place.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/OpenSea.png" alt="">
+                </a>
+                <a href="#" class="brands__unit swiper-slide">
+                    <img src="images/Super-Rare.png" alt="">
+                </a>
+            </div>
+        </section>
+        <section class="advantages">
             <div class="mbox">
-                <div class="premium__block">
-                    <div class="title-row">
-                        <div class="title-row__left">
-                            <svg>
-                                <use xlink:href="#wave-left"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title">pREMIUM dOG food</h3>
-                        <div class="title-row__right">
-                            <svg>
-                                <use xlink:href="#wave-right"></use>
-                            </svg>
-                        </div>
+                <div class="advantages__wrap">
+                    <div class="advantages__coll">
+                        <h3 class="title">Unparalleled & secure</h3>
                     </div>
-                    <div class="premium__text-wrap">
-                        <p class="premium__text text">A little description of why The Pet Butcher is so great. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLoremdolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmodLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmoddolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
-                        <span class="premium__show-more">Learn more</span>
-                    </div>
-                    <div class="premium__img">
-                        <div class="premium__img-unit">
-                            <img src="images/TPB-Badge-Left.png" alt="">
+                    <div class="advantages__coll">
+                        <div class="advantages__unit">
+                            <div class="advantages__img">
+                                <img src="images/advantage-1.png" alt="">
+                            </div>
+                            <h5 class="advantages__title unit-title">Mint with the Muse App</h5>
+                            <p class="advantages__text text">With our unparalleled minting functionality, Muse users can mint their own pictures and digital art in real time, directly from their phone to their desired wallet. Once minted, users acquire their non-fungible token into their wallet and can sell their NFT’s on any desired marketplace.</p>
                         </div>
-                        <div class="premium__img-unit">
-                            <img src="images/TPB-Badge-Middle.png" alt="">
-                        </div>
-                        <div class="premium__img-unit">
-                            <img src="images/TPB-Badge-Right.png" alt="">
+                        <div class="advantages__unit">
+                            <div class="advantages__img">
+                                <img src="images/advantage-2.png" alt="">
+                            </div>
+                            <h5 class="advantages__title unit-title">Verification </h5>
+                            <p class="advantages__text text">Ownership verification is our highest priority. Using the Muse app and a button on the frame, ownership is verified with a simple QR code scan.</p>
+                            <div class="advantages__brands">
+                                <a href="#" class="advantages__brands-item">
+                                    <img src="images/advantage-brand1.png" alt="">
+                                </a>
+                                <a href="#" class="advantages__brands-item">
+                                    <img src="images/advantage-brand2.png" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,422 +249,66 @@
         </section>
         <section class="products">
             <div class="mbox">
-                <div class="title-row">
-                    <div class="title-row__left">
-                        <svg>
-                            <use xlink:href="#wave-left"></use>
-                        </svg>
-                    </div>
-                    <h3 class="title">Featured Products</h3>
-                    <div class="title-row__right">
-                        <svg>
-                            <use xlink:href="#wave-right"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="products__slider swiper-wrapper">
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-Meat-Mix.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">GRAIN MIX</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            7.80kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-5-Chicken.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            13.80kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-Meat-Mix.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            15.40kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-5-Chicken.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            13.80kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-Meat-Mix.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            15.40kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-5-Chicken.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">Skinless Chicken Breast Fillets</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            13.80kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-                <a href="#" class="products__slide swiper-slide">
-                    <div class="products__slide-img">
-                        <img src="images/TPB-Meat-Mix.png" alt="">
-                    </div>
-                    <h4 class="products__slide-title">BEEF & LAMB MIX</h4>
-                    <div class="products__slide-bottom">
-                        <div class="products__slide-price">
-                            <span>$</span>
-                            15.40kg
-                        </div>
-                        <div class="products__slide-view">View</div>
-                    </div>
-                </a>
-            </div>
-            <div class="arrows">
-                <div class="arrows__wrap">
-                    <div class="arrows__left">
-                        <svg>
-                            <use xlink:href="#arrow-left"></use>
-                        </svg>
-                    </div>
-                    <a href="#" class="btn"><span>VIEW ALL</span></a>
-                    <div class="arrows__right">
-                        <svg>
-                            <use xlink:href="#arrow-right"></use>
-                        </svg>
+                <div class="products__row">
+                    <div class="products__unit" style="background-image: url('images/products-1.png')">
+                        <h3 class="title">Your look</h3>
+                        <p class="products__text text">Effortlessly customise your Muse with an easily attachable frame, available in four different colours to suit any interior.</p>
+                        <a href="#" class="link">Buy now</a>
+                     </div>
+                    <div class="products__unit" style="background-image: url('images/products-2.png')">
+                        <h3 class="title">Your size</h3>
+                        <p class="products__text text">Available in 21”, 32”, and 55”, all with immense 4k clarity.</p>
+                        <a href="#" class="link">Buy now</a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="best-lives">
-            <div class="mbox">
-                <div class="best-lives__wrap">
-                    <div class="best-lives__img">
-                        <img src="images/TPB-Quality-Pet-Food.png" alt="">
-                    </div>
-                    <div class="best-lives__info">
-                        <h3 class="title">LIVING THEIR BEST LIVES</h3>
-                        <div class="best-lives__subtitle">The best in the business</div>
-                        <p class="best-lives__text text">We don’t use preservatives, fillers, flavours, or colours – just natural meat, vegetables, fruit, rice and pasta that comes from the same sources as what we eat ourselves.</p>
-                        <p class="best-lives__text text">Nothing processed, no “numbers” just good old fashioned fresh and home cooked food with lots of variety which leave our pets feeling and looking great and living their best lives.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section class="benefits">
-            <div class="benefits__wrap">
-                <div class="benefits__black-side">
-                    <div class="mbox">
-                        <h3 class="title">Key benefits to our products</h3>
-                        <div class="benefits__subtitle">We strive to deliver the best locally sourced products for your pets. </div>
-                        <div class="benefits__text-wrap">
-                            <svg>
-                                <use xlink:href="#tick-ico"></use>
-                            </svg>
-                            <p class="benefits__text">We have regular food deliveries available straight to your door.  Sign up for a weekly order on repeat or a once off.
-                            </p>
-                        </div>
-                        <div class="benefits__text-wrap">
-                            <svg>
-                                <use xlink:href="#tick-ico"></use>
-                            </svg>
-                            <p class="benefits__text">Deliveries are packed in an insulated box and delivered to your door by our Pet Butcher refrigerated trucks.
-                            </p>
-                        </div>
-                        <div class="benefits__text-wrap">
-                            <svg>
-                                <use xlink:href="#tick-ico"></use>
-                            </svg>
-                            <p class="benefits__text">We believe a balanced and freshly made diet will improve the health and happiness of you pet.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="benefits__img"></div>
-            </div>
-        </section>
-        <section class="response">
-            <div class="mbox">
-                <div class="response__inner">
-                    <div class="title-row">
-                        <div class="title-row__left">
-                            <svg>
-                                <use xlink:href="#wave-left"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title">What people say about us</h3>
-                        <div class="title-row__right">
-                            <svg>
-                                <use xlink:href="#wave-right"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="response__slider-wrap">
-                        <div class="response__slider swiper-wrapper">
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Gus.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">Whitnee King</h5>
-                                <span class="response__slide-subtitle">& Gus the Golden Retriever </span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Merlin.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">JOEL FRANKLIN</h5>
-                                <span class="response__slide-subtitle">& Merlin</span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Ranger.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">ADAM BOCK</h5>
-                                <span class="response__slide-subtitle">& Ranger</span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Gus.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">Whitnee King</h5>
-                                <span class="response__slide-subtitle">& Gus the Golden Retriever </span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Merlin.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">JOEL FRANKLIN</h5>
-                                <span class="response__slide-subtitle">& Merlin</span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="response__slide swiper-slide">
-                                <div class="response__slide-img">
-                                    <img src="images/TPB-Ranger.png" alt="">
-                                </div>
-                                <h5 class="response__slide-title title">ADAM BOCK</h5>
-                                <span class="response__slide-subtitle">& Ranger</span>
-                                <p class="response__slide-text text">“This is some of the best pet food I have ever eaten… I mean… for my dog. Delivery is always on time and the standard of food is so consistent.”</p>
-                                <div class="rating">
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-active-ico"></use>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#rating-ico"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="arrows arrows--black">
-                            <div class="arrows__wrap">
-                                <div class="arrows__left arrows__disabled">
-                                    <svg>
-                                        <use xlink:href="#arrow-left"></use>
-                                    </svg>
-                                </div>
-                                <div class="arrows__right">
-                                    <svg>
-                                        <use xlink:href="#arrow-right"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="special-occasion">
-            <div class="mbox">
-                <div class="special-occasion__block">
-                    <div class="special-occasion__info">
-                        <div class="special-occasion__title">
-                            <svg class="special-occasion__left">
-                                <use xlink:href="#occasion-left"></use>
-                            </svg>
-                            <h3 class="title">Special Occasion HAMPERS</h3>
-                            <svg class="special-occasion__right">
-                                <use xlink:href="#occasion-right"></use>
-                            </svg>
-                        </div>
-                        <p class="special-occasion__text text">Birthdays, Christmas, Easter or even Get Well Soon.  We have beautiful Hound Hampers for your pet.  Come in store and see our range or select online for delivery.  We have pre packed hampers or can make one up with your own selection of treats and accessories.</p>
-                        <a href="#" class="btn"><span>VIEW RANGE</span></a>
-                    </div>
-                    <div class="special-occasion__img">
-                        <img src="images/TPB-Birthdays.png" alt="">
+                <div class="purchase" style="background-image: url('images/purchase-bg.png')">
+                    <div class="purchase__wrap">
+                        <h3 class="title">Buy now</h3>
+                        <p class="purchase__text text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                        <a href="#" class="btn btn--green btn--big">Buy now</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__top">
-            <div class="mbox">
+        <div class="mbox">
+            <h3 class="title">Join the mailing list</h3>
+            <form action="#" class="footer__form">
+                <div class="footer__input">
+                    <input type="email" class="unit-title" placeholder="Enter email">
+                </div>
+                <button class="link link--input" type="submit">Subscribe</button>
+            </form>
+            <div class="footer__nav">
                 <a href="#" class="footer__logo">
-                    <svg>
-                        <use xlink:href="#footer-logo"></use>
-                    </svg>
+                    <img src="images/footer-logo.svg" alt="">
                 </a>
-                <div class="footer__nav">
-                    <a href="#" class="footer__link">Home</a>
-                    <a href="#" class="footer__link">Shop</a>
-                    <a href="#" class="footer__link">About</a>
-                    <a href="#" class="footer__link">Wholesale</a>
-                    <a href="#" class="footer__link">FAQ</a>
-                    <a href="#" class="footer__link">Delivery & Shipping</a>
-                    <a href="#" class="footer__link">Contact</a>
-                    <a href="#" class="footer__link">Privacy Policy</a>
+                <div class="footer__links">
+                    <a href="#" class="footer__links-unit unit-title">Purchase</a>
+                    <a href="#" class="footer__links-unit unit-title">Art</a>
+                    <a href="#" class="footer__links-unit unit-title">About</a>
+                    <a href="#" class="footer__links-unit unit-title">Contact</a>
+                </div>
+                <div class="footer__btns">
+                    <a href="#" class="btn btn--white btn--big">Buy now</a>
+                    <div class="socials">
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#fb-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#inst-ico"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="mbox">
-                <div class="footer__social">
-                    <a href="#" class="footer__social-unit">
-                        <svg>
-                            <use xlink:href="#fb-ico"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="footer__social-unit">
-                        <svg>
-                            <use xlink:href="#insta-ico"></use>
-                        </svg>
-                    </a>
-                </div>
-                <span class="footer__copyright">© 2022 The Pet Butcher</span>
+            <div class="footer__copyright">
+                <span>Terms & Conditions</span>
+                <span>© 2022 Muse Frame</span>
             </div>
         </div>
     </footer>

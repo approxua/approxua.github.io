@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>the PET BUTCHER</title>
+    <title>Muse Frame</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,49 +16,41 @@
 <body>
 <div class="global-wrapper">
     <header class="header">
-        <div class="header__row">
-            <div class="mbox">
-                <div class="header__logo-wrap">
-                    <a href="/" class="header__logo">
-                        <svg>
-                            <use xlink:href="#logo-ico"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="header__burger">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            <div class="header__nav">
-                <div class="header__links">
-                    <a href="#" class="header__links-item">Shop</a>
-                    <a href="#" class="header__links-item">About</a>
-                    <a href="#" class="header__links-item">Wholesale</a>
-                    <a href="#" class="header__links-item">Contact</a>
-                </div>
-                <a href="#" class="header__search">
-                    <svg>
-                        <use xlink:href="#search-ico"></use>
-                    </svg>
+        <div class="mbox">
+            <div class="header__wrap">
+                <a href="#" class="header__logo">
+                    <img src="images/header-logo.svg" alt="">
                 </a>
-                <a href="#" class="header__basket">
-                    <svg>
-                        <use xlink:href="#basket-ico"></use>
-                    </svg>
-                    <span class="header__basket-circle">2</span>
-                </a>
-    
+                <div class="header__nav">
+                    <a href="#" class="header__nav-unit">Art</a>
+                    <a href="#" class="header__nav-unit">About</a>
+                    <a href="#" class="header__nav-unit">Contact</a>
+                </div>
+                <div class="header__aside">
+                    <div class="header__btns">
+                        <a href="#" class="btn btn--transparent">Cart (<span>0</span>)</a>
+                        <a href="#" class="btn btn--black">Buy now</a>
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#fb-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#inst-ico"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <div class="shadow"></div>
-    <div class="row"></div>
-    <div class="col"></div>
-    <div class="col"></div>
     <div class="main">
         <div class="mbox">
             <div class="head-line">
-                <h1>The PET BUTCHER HTML 👨&zwj;💻 </h1>
+                <h1>Muse HTML 👨&zwj;💻 </h1>
             </div>
 
             <div class="wrap">
@@ -70,50 +62,10 @@
                             Main
                         </a>
                     </li>
-                    <li>
-                        <a href="about.html" class="true">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="wholesale.html" class="true">
-                            Wholesale
-                        </a>
-                    </li>
-                    <li>
-                        <a href="shop.html" class="true">
-                            Shop
-                        </a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="true">
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a href="faq.html" class="true">
-                            FAQ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="privacy.html" class="true">
-                            Privacy
-                        </a>
-                    </li>
-                    <li>
-                        <a href="delivery.html" class="true">
-                            Delivery
-                        </a>
-                    </li>
                 </ol>
 
                 <h5>Inner page</h5>
                 <ol class="box">
-                    <li>
-                        <a href="card.html" class="true">
-                            Card
-                        </a>
-                    </li>
                 </ol>
                 <h5>Service</h5>
                 <ol class="box">
@@ -127,40 +79,43 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="footer__top">
-            <div class="mbox">
+        <div class="mbox">
+            <h3 class="title">Join the mailing list</h3>
+            <form action="#" class="footer__form">
+                <div class="footer__input">
+                    <input type="email" class="unit-title" placeholder="Enter email">
+                </div>
+                <button class="link link--input" type="submit">Subscribe</button>
+            </form>
+            <div class="footer__nav">
                 <a href="#" class="footer__logo">
-                    <svg>
-                        <use xlink:href="#footer-logo"></use>
-                    </svg>
+                    <img src="images/footer-logo.svg" alt="">
                 </a>
-                <div class="footer__nav">
-                    <a href="#" class="footer__link">Home</a>
-                    <a href="#" class="footer__link">Shop</a>
-                    <a href="#" class="footer__link">About</a>
-                    <a href="#" class="footer__link">Wholesale</a>
-                    <a href="#" class="footer__link">FAQ</a>
-                    <a href="#" class="footer__link">Delivery & Shipping</a>
-                    <a href="#" class="footer__link">Contact</a>
-                    <a href="#" class="footer__link">Privacy Policy</a>
+                <div class="footer__links">
+                    <a href="#" class="footer__links-unit unit-title">Purchase</a>
+                    <a href="#" class="footer__links-unit unit-title">Art</a>
+                    <a href="#" class="footer__links-unit unit-title">About</a>
+                    <a href="#" class="footer__links-unit unit-title">Contact</a>
+                </div>
+                <div class="footer__btns">
+                    <a href="#" class="btn btn--white btn--big">Buy now</a>
+                    <div class="socials">
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#fb-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg>
+                                <use xlink:href="#inst-ico"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="mbox">
-                <div class="footer__social">
-                    <a href="#" class="footer__social-unit">
-                        <svg>
-                            <use xlink:href="#fb-ico"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="footer__social-unit">
-                        <svg>
-                            <use xlink:href="#insta-ico"></use>
-                        </svg>
-                    </a>
-                </div>
-                <span class="footer__copyright">© 2022 The Pet Butcher</span>
+            <div class="footer__copyright">
+                <span>Terms & Conditions</span>
+                <span>© 2022 Muse Frame</span>
             </div>
         </div>
     </footer>
