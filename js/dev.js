@@ -77,8 +77,6 @@ function nextPresentationSlide(section, index) {
 
         let textClass = '.parallax__text';
         let textActiveClass = 'parallax__text--active';
-        let textPrevClass = 'parallax__text--prev';
-        let textNextClass = 'parallax__text--next';
 
         let prevSlide = index - 1;
         let nextSlide = index + 1;
@@ -154,7 +152,6 @@ function parallaxSlider(el) {
         }
 
         if ((scrollTop > sectionOffset) && (scrollTop + $window.innerHeight() < sectionOffset + height)) {
-
             scroll = scrollTop - section.offset().top;
 
             if (scroll > distance) {
@@ -170,14 +167,40 @@ function parallaxSlider(el) {
             nextPresentationSlide(section, index);
         }
     })
-
-
 }
 
+function parallaxDropdown(el) {
+    let section = $(`.${el}`);
+    let sectionOffset = section.offset().top;
+    let img = section.find('.parallax__img');
+    let scrollTop = $window.scrollTop();
+
+    $window.on('scroll', function () {
+        scrollTop = $window.scrollTop();
+
+        if (((scrollTop + $window.innerHeight()) > sectionOffset) && (scrollTop < (sectionOffset + section.innerHeight()))) {
+            section.addClass('parallax--active');
+
+            for (let i = 0; img.length > i; i++) {
+                let $this = $(img[i]);
+                let itemOffsetTop = $this.offset().top;
+                let itemOffsetCenter = itemOffsetTop + ($this.innerHeight() / 2);
+                let scrollOffset = scrollTop + ($window.innerHeight() / 2);
+
+                if ((itemOffsetCenter < scrollOffset) && (itemOffsetTop > scrollTop)) {
+                    nextPresentationSlide(section, i)
+                }
+            }
+        } else {
+            section.removeClass('parallax--active');
+        }
+    })
+}
 
 $(document).ready(function () {
     animationHeader();
     animateScroll();
     parallaxSlider('presentation');
     parallaxSlider('gallery');
+    parallaxDropdown('advantages');
 })
