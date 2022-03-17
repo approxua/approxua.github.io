@@ -22,7 +22,7 @@
                     <img src="images/header-logo.svg" alt="">
                 </a>
                 <div class="header__nav">
-                    <a href="#" class="header__nav-unit">Art</a>
+                    <a href="#" class="header__nav-unit">Partners</a>
                     <a href="#" class="header__nav-unit">About</a>
                     <a href="#" class="header__nav-unit">Contact</a>
                 </div>
@@ -42,30 +42,37 @@
                                 <use xlink:href="#inst-ico"></use>
                             </svg>
                         </a>
+                        <a href="#" class="socials__unit">
+                            <svg style="width: 22px; height: 16px">
+                                <use xlink:href="#twit-ico"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
-        <div class="decor">
-          <div class="decor__item decor__item--left"></div>
-          <div class="decor__item decor__item--right"></div>
-        </div>
         <section class="hero">
-          <div class="mbox">
-            <h1 class="main-title hero__title">Collect. Verify. Showcase.</h1>
-            <div class="hero__subtitle">The digital frame for NFT collectors that care about authenticated
-              digital art</div>
-            <div class="hero__link">
-              <a href="https://www.youtube.com/watch?v=CmwRQqJsegw" class="play" data-fancybox>See how it works</a>
+          <div class="hero__inner">
+            <div class="mbox">
+              <h1 class="main-title hero__title">Collect. Verify. Showcase.</h1>
+              <div class="hero__subtitle">The digital frame for NFT collectors that care about authenticated
+                digital art</div>
+              <div class="hero__link">
+                <a href="https://www.youtube.com/watch?v=CmwRQqJsegw" class="play" data-fancybox>See how it works</a>
+              </div>
+              <div class="hero__video">
+                <video muted autoplay loop>
+                  <source src="video/preview.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
             </div>
-            <div class="hero__video">
-              <video muted autoplay loop>
-                <source src="video/preview.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
+          </div>
+          <div class="decor">
+            <div class="decor__item decor__item--left"></div>
+            <div class="decor__item decor__item--right"></div>
           </div>
         </section>
         <section class="feature">
@@ -214,36 +221,52 @@
                 </a>
             </div>
         </section>
-        <section class="advantages parallax">
-            <div class="mbox">
-                <div class="advantages__wrap">
-                    <div class="advantages__coll">
-                        <h3 class="title">Unparalleled & secure</h3>
-                    </div>
-                    <div class="advantages__coll">
-                        <div class="advantages__unit parallax__img parallax__img--active">
-                            <div class="advantages__img">
-                                <img src="images/advantage-1.png" alt="">
+        <section class="advantages-wrap">
+            <div class="advantages">
+                <div class="advantages__inner">
+                    <div class="mbox">
+                        <div class="advantages__wrap">
+                            <div class="advantages__coll">
+                                <h3 class="title">Unparalleled & secure</h3>
                             </div>
-                            <h5 class="advantages__title unit-title">Mint with the Muse App</h5>
-                            <p class="advantages__text text">With our unparalleled minting functionality, Muse users can mint their own pictures and digital art in real time, directly from their phone to their desired wallet. Once minted, users acquire their non-fungible token into their wallet and can sell their NFT’s on any desired marketplace.</p>
+                            <div class="advantages__coll">
+                                <div class="advantages__unit parallax__img parallax__img--active">
+                                    <div class="advantages__img">
+                                        <img src="images/advantage-1.png" alt="">
+                                    </div>
+                                    <div class="advantages__info">
+                                        <h5 class="advantages__title unit-title">Mint with the Muse App</h5>
+                                        <p class="advantages__text text">With our unparalleled minting functionality, Muse users can
+                                            mint their own pictures and digital art in real time, directly from their phone to their
+                                            desired wallet. Once minted, users acquire their non-fungible token into their wallet and
+                                            can sell their NFT’s on any desired marketplace.</p>
+                                    </div>
+                                </div>
+                                <div class="advantages__unit parallax__img parallax__img--next">
+                                    <div class="advantages__img">
+                                        <img src="images/advantage-2.png" alt="">
+                                    </div>
+                                    <div class="advantages__info">
+                                        <h5 class="advantages__title unit-title">Verification </h5>
+                                        <p class="advantages__text text">Ownership verification is our highest priority. Using the Muse
+                                            app and a button on the frame, ownership is verified with a simple QR code scan.</p>
+                                        <div class="advantages__brands">
+                                            <a href="#" class="advantages__brands-item">
+                                                <img src="images/advantage-brand1.png" alt="">
+                                            </a>
+                                            <a href="#" class="advantages__brands-item">
+                                                <img src="images/advantage-brand2.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="advantages__unit parallax__img parallax__img--next">
-                            <div class="advantages__img">
-                                <img src="images/advantage-2.png" alt="">
-                            </div>
-                            <h5 class="advantages__title unit-title">Verification </h5>
-                            <p class="advantages__text text">Ownership verification is our highest priority. Using the Muse app and a button on the frame, ownership is verified with a simple QR code scan.</p>
-                            <div class="advantages__brands">
-                                <a href="#" class="advantages__brands-item">
-                                    <img src="images/advantage-brand1.png" alt="">
-                                </a>
-                                <a href="#" class="advantages__brands-item">
-                                    <img src="images/advantage-brand2.png" alt="">
-                                </a>
-                            </div>
-                        </div>
                     </div>
+                </div>
+                <div class="decor">
+                    <div class="decor__item decor__item--left"></div>
+                    <div class="decor__item decor__item--right"></div>
                 </div>
             </div>
         </section>
@@ -292,6 +315,15 @@
                 </div>
                 <div class="footer__btns">
                     <a href="#" class="btn btn--white btn--big">Buy now</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <span>© 2022 Muse Frame</span>
+                </div>
+                <div class="footer__socials">
                     <div class="socials">
                         <a href="#" class="socials__unit">
                             <svg>
@@ -303,13 +335,25 @@
                                 <use xlink:href="#inst-ico"></use>
                             </svg>
                         </a>
+                        <a href="#" class="socials__unit">
+                            <svg style="width: 25px; height: 21px;">
+                                <use xlink:href="#twit-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg style="width: 21px; height: 24px;">
+                                <use xlink:href="#pinta-ico"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="socials__unit">
+                            <svg style="width: 28px; height: 21px;">
+                                <use xlink:href="#discord-ico"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="footer__copyright">
-                <span>Terms & Conditions</span>
-                <span>© 2022 Muse Frame</span>
-            </div>
+    
         </div>
     </footer>
     <script>
