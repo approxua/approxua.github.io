@@ -895,15 +895,14 @@ function nextPresentationSlide(section, index) {
     }
 }
 
-function parallaxSlider(el) {
-    let header = $('.header');
+function parallaxSlider(el, control) {
     let section = $(`.${el}`);
     let wrap = section.find('.parallax__wrap');
     let img = section.find('.parallax__img')
     let activeImg = section.find('.parallax__img--active');
     let height = img.innerHeight() * img.length;
     let index = 0;
-    let distance = img.innerHeight() / 2;
+    let distance = img.innerHeight() / 3;
     let prevSlide = 0;
 
     wrap.css({'height': height});
@@ -949,6 +948,7 @@ function parallaxSlider(el) {
         }
     })
 }
+
 
 function parallaxDropdown(el) {
     let section = $(`.${el}`);
@@ -1022,10 +1022,11 @@ function scrollSpeed(el) {
     })
 }
 
+
 $(document).ready(function () {
     animateDecor();
     parallaxSlider('presentation');
-    parallaxSlider('gallery');
+    parallaxSlider('gallery', true);
     parallaxFirstAnim('gallery');
     parallaxDropdown('advantages');
     scrollSpeed('presentation');
