@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"
+     style="position:absolute">
+
+    <symbol id="btn-arrow" viewBox="0 0 20.252 10.641">
+        <g transform="translate(-600 -2727)">
+            <path d="M126.606.354l4.967,4.967-4.967,4.967" transform="translate(487.973 2727)" fill="none" stroke="#fff"
+                  stroke-miterlimit="10" stroke-width="1"/>
+            <line x1="19.545" transform="translate(600 2732.32)" fill="none" stroke="#fff" stroke-miterlimit="10"
+                  stroke-width="1"/>
+        </g>
+    </symbol>
+    <symbol id="btn-arrow-denim" viewBox="0 0 20.253 10.641">
+        <g transform="translate(-600 -2727)">
+            <path d="M126.606.354l4.967,4.967-4.967,4.967" transform="translate(487.973 2727)" fill="none"
+                  stroke="#02162b" stroke-miterlimit="10" stroke-width="1"/>
+            <line x1="19.545" transform="translate(600 2732.32)" fill="none" stroke="#02162b" stroke-miterlimit="10"
+                  stroke-width="1"/>
+        </g>
+    </symbol>
+    <symbol id="arrow-prev-ico" viewBox="0 0 12 21">
+        <path d="M.051 10.231l9.965 10 1.435-1.44-8.592-8.583 8.57-8.56L10.016.231z"/>
+    </symbol>
+    <symbol id="arrow-next-ico" viewBox="0 0 13 21">
+        <path d="M12.349 10.231l-9.965 10-1.435-1.44 8.592-8.583-8.57-8.56L2.384.231z"/>
+    </symbol>
+</svg>

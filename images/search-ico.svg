@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <clipPath id="bztfa">
+            <path fill="#fff" d="M2.481 6.293a6.52 6.52 0 1 1 13.04 0 6.52 6.52 0 0 1-13.04 0z"/>
+        </clipPath>
+    </defs>
+    <g>
+        <g transform="rotate(-45 9 9)">
+            <g>
+                <path fill="none" stroke="#02162b" stroke-miterlimit="20" stroke-width="3"
+                      d="M2.481 6.293a6.52 6.52 0 1 1 13.04 0 6.52 6.52 0 0 1-13.04 0z"
+                      clip-path="url(&quot;#bztfa&quot;)"/>
+            </g>
+            <g>
+                <path fill="none" stroke="#02162b" stroke-miterlimit="20" stroke-width="1.5" d="M9 12.194v6.032"/>
+            </g>
+        </g>
+    </g>
+</svg>
